@@ -1,3 +1,3 @@
 # bdacoin.org
 
-tesuto
+* http://bdacoin.org のサイトデータ
