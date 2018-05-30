@@ -1,0 +1,802 @@
+﻿<!DOCTYPE html>
+<!--nobanner-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BLACK DIA COIN</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201805231913">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+</head>
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" style="font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic;" href="#page-top"><i class="fa fa-bda2"></i> BLACK DIA COIN</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#whitepaper">WHITEPAPER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#roadmap">ROADMAP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#spec">SPEC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#team">TEAM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"><i class="fa fa-bda2"></i> BLACK DIA COIN</div>
+                <div class="intro-heading text-uppercase">
+                    次世代のバー決済<br>
+                    <span style="font-size:0.5em">（みたいな一言系で）</span>
+                </div>
+                <!-- a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">もっと知る</a -->
+            </div>
+        </div>
+    </header>
+    <!-- Services -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">ABOUT</h2>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em">
+                        時代は現代進化し続ける世界、<br>BLACKDIAとはBAR決済COINとしてBDAを利用します。<br>
+                        <br>
+                        料金お支払い時、経費をこのBLACKDIAを利用するものとし、<br>
+                        その際に送金の速さを実現させます。
+                    </h3>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Whitepaper Grid -->
+    <section class="bg-light" id="whitepaper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">WHITEPAPER</h2>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em">以下がホワイトペーパーから抜粋した概要（トピック）であるということのかるい説明文。</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">独自アプリの開発</h4>
+                    <p class="text-muted" style="text-align:left">専用Walletのアプリを開発し、クーポンサイトやクーポンマガジンとの連動を目指し、誰でもアプリがあればお支払い出来るシステムを発行、又クーポンを発行し、より安く利用できるように私達は実現させます。</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">BDAを使うメリット</h4>
+                    <p class="text-muted" style="text-align:left">現在では仮想通貨でお支払いが出来ないお店がほとんどです。だんだん進化していく世界に新しい決済方法としてこのBDAを利用します。仮想通貨は短期的に価値があがり、決済には仮想通貨でしたいという方へ私達はこのコインで決済できるように実現していきます。</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">仮想通貨の現状</h4>
+                    <p class="text-muted" style="text-align:left">仮想通貨には安い送金手数料やキャッシュレスなどの利点がある一方、投機や脱税のために利用される欠点がある。これにより、本来、通貨は循環することによって価値が高まるが、通貨として利用できない状況になっている。</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">BDAの魅力</h4>
+                    <p class="text-muted" style="text-align:left">BLACKDIAは、誰でも簡単に支払いを行うための仕組みと仮想通貨をより多く得られるようにする仕組みを提供して、人々が通貨を使う頻度を増加させることで通貨自体の価値を半永久的に上昇させる。</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-credit-card fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">手数料は劣悪なサービス</h4>
+                    <p class="text-muted" style="text-align:left">
+                        現代の手数料は、極めて劣悪なサービスだ。BDAは圧倒的な優位性を持つ。
+                        現代のクレジットカードの決済手数料<br>
+                        ・飲食店では5％~10%程度<br>
+                        ・小売店では4％程度<br>
+                        極めて高い。BDAでは0.4%決済が可能にします。
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">セキリュティーの向上</h4>
+                    <p class="text-muted" style="text-align:left">ネットサーバーハッキング、サーバー攻撃をBDA専用Walletはセキリュティーに向上し二段階認証システムを導入、Walletを外部から守ります</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ReadMap -->
+    <section id="roadmap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">RoadMap</h2>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em">ロードマップだよ、ということの軽い捕捉と注目点や傾向で見てほしい点があればここでさきにのべておく.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/01.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-5-10</h4>
+                                    <h4 class="subheading">BLACK DIA COIN 誕生</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        wavesトークンとして、<br>
+                                        BLACK DIA COIN が誕生。<br>
+                                        発行枚数 1兆 枚。<br>
+                                        翌日より、取引所で売買開始。
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/02.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-5-12</h4>
+                                    <h4 class="subheading">Air drop 配布開始</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">(どういうエアドロップだったのかBDA/COINさん記載)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/03.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-6上旬</h4>
+                                    <h4 class="subheading">
+                                        ホワイトペーパー発表<br>
+                                        公式webの発表
+                                    </h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">(ホワイトペーパー好評への所感をBDA/COINさんが記載すればいいかと)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/04.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-6下旬</h4>
+                                    <h4 class="subheading">資金調達の実行</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        ＣＥに上場に向け、トータル 4BTC の<br>
+                                        資金調達を予定。<br>
+                                        ICOではなく、公募などを執り行う予定。<br>
+                                        資金協力者にはBDAボーナスを送付する予定。
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/07.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-7上旬</h4>
+                                    <h4 class="subheading">Airdrop配布終了予定。</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">(延期もあり)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/08.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-7下旬</h4>
+                                    <h4 class="subheading">取引所ロゴ公式発表。</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        取引所などに掲載される「コインのロゴ」を発表予定です。<br>
+                                        (なんかBDA/COINさんコメントあればここに)
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/05.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018-8上旬</h4>
+                                    <h4 class="subheading">イーサリアムトークンへ</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        BDAはイーサリアムトークンへと<br>
+                                        生まれ変わります。(ERC20ベース)<br>
+                                        各保有者の枚数に応じてETHへ等価交換実行。<br>
+                                        (あくまで予定)
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/06.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2018年内</h4>
+                                    <h4 class="subheading">CoinExchange上場へ</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">CoinExchangeを目指します。</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2019/1月-4月</h4>
+                                    <h4 class="subheading">BDA専用Walletの開発</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">BDA専用のWalletを開発します。</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/09.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2019/4月-7月</h4>
+                                    <h4 class="subheading">新たに取引所に上場を目指す</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">(なにかコメント)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/10.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2020年</h4>
+                                    <h4 class="subheading">仮想通貨BARをオープン</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        仮想通貨BDAで決済可能な酒場オープン。<br />
+                                        BLACK DIA COINでの決済を目指す。
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/9.png" alt="">
+                                <!--h4>
+                                    <br>NEXT
+                                    <br>
+                                </h4-->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Allocation Grid -->
+    <section class="bg-light" id="spec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">SPEC</h2>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em">
+                        運用費用の内訳だ、というかるい説明をここに記載する。<br>
+                        (聞いたことも無いような謎内訳がないのであれば、各々の項目に関する説明は不要？？)
+                    </h3>
+                </div>
+                <div class="col-sm-6" style="text-align:center">
+                    <canvas id="CoinPortFolioGraph" style="height: 60vmin; width: 60vmin;"></canvas>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-member" style="text-align:left">
+                        <h4>トークン</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                名称：BDA<br>
+                                種別：Wavesトークン<br>
+                                枚数：１兆枚<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4>開発費 <i class="fa fa-ellipsis-h"></i> 30%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                独自アプリケーションの開発、<br>決済システム研究・開発費として利用します。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4>上場時売却分 <i class="fa fa-ellipsis-h"></i> 45%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                最初の上場時に20％を売却します。<br>
+                                残りは、新たな取引所へ上場する為の資金として<br>
+                                必要に応じて順次売却します。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4>マーケティング費 <i class="fa fa-ellipsis-h"></i> 15%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                Air Drop、公式Twitter、Discord、<br>その他宣伝を含む配布分に利用します。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4>運営チーム <i class="fa fa-ellipsis-h"></i> 10%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                協力者、開発チームに利用します。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Team -->
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Team</h2>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em">以下がチームのメンバーであるということの説明。<br></h3>
+                </div>
+            </div>
+            <!-- 12を対象のcol-sm-(数値)で割った値で分割する -->
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+                        <h4>BDA / COIN</h4>
+                        <p class="text-muted">リーダー / 運営 / 開発</p>
+                        <!--ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+                        <h4>K. A.</h4>
+                        <p class="text-muted">Web / BOT / 開発</p>
+                        <!--ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+                        <h4>ミニーマウス</h4>
+                        <p class="text-muted">広報 / イベント担当 / 集客</p>
+                        <!-- ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+                        <h4>Ykyky</h4>
+                        <p class="text-muted">営業 / 集客</p>
+                        <!-- ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+                        <h4>矢澤にこ</h4>
+                        <p class="text-muted">広報 / イベント担当</p>
+                        <!-- ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+                        <h4>LOOK</h4>
+                        <p class="text-muted">アドバイザー / 開発サポート</p>
+                        <!-- ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+                        <h4>TT</h4>
+                        <p class="text-muted">ブロックチェーンアドバイザー / サポーター</p>
+                        <!-- ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                        </ul-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted" style="font-size:1.3em">
+                        私たちがどのような想いで集まっているのか？<br>
+                        といったようなことを、ちょっと「粋」な文面で2行ほど記載する。集まったばかりのチームだよってことも記載する良い。<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <!--
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+    <!-- Contact -->
+    <!--
+    <section id="qanda">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Q & A</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <-->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="copyright">Copyright &copy; BLACK DIA COIN Team 2018</span>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/bda_dia">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://discord.gg/zcXbcbm">
+                                <i class="fa fa-discord"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--div class="col-md-4">
+                  <ul class="list-inline quicklinks">
+                    <li class="list-inline-item">
+                      <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">Terms of Use</a>
+                    </li>
+                  </ul>
+                </div-->
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+    <script language="javascript">
+        var dataLabelPlugin = {
+            afterDatasetsDraw: function (chart, easing) {
+                // To only draw at the end of animation, check for easing === 1
+                var ctx = chart.ctx;
+
+                chart.data.datasets.forEach(function (dataset, i) {
+                    var dataSum = 0;
+                    dataset.data.forEach(function (element) {
+                        dataSum += element;
+                    });
+
+                    var meta = chart.getDatasetMeta(i);
+                    if (!meta.hidden) {
+                        meta.data.forEach(function (element, index) {
+                            // Draw the text in black, with the specified font
+                            ctx.fillStyle = 'rgb(255, 255, 255)';
+
+                            var fontSize = 14;
+                            var fontStyle = 'normal';
+                            var fontFamily = 'Helvetica Neue';
+                            ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+                            // Just naively convert to string for now
+                            var labelString = chart.data.labels[index];
+                            var dataString = (Math.round(dataset.data[index] / dataSum * 1000) / 10).toString() + "%";
+
+                            // Make sure alignment settings are correct
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+
+                            var padding = 5;
+                            var position = element.tooltipPosition();
+                            ctx.fillText(labelString, position.x, position.y - (fontSize / 2) - padding);
+                            ctx.fillText(dataString, position.x, position.y + (fontSize / 2) - padding);
+                        });
+                    }
+                });
+            }
+        };
+
+        // Chart
+        var myChart = "CoinPortFolioGraph";
+        var chart = new Chart(myChart, {
+            type: 'pie',
+            data: {
+                labels: ["開発費", "上場時売却分", "マーケティング費", "運営チーム"],
+                datasets: [{
+                    label: "",
+                    backgroundColor: ["#3F51B5", "#F44336", "#FF9800", "#4CAF50"],
+                    data: [30, 45, 15, 10],
+                }]
+            },
+            options: {
+                title: {
+                    display: false,
+                    text: "発行枚数 １兆枚"
+                },
+                legend: {
+                },
+                maintainAspectRatio: true,
+            },
+            plugins: [dataLabelPlugin],
+        });
+    </script>
+</body>
+</html>
