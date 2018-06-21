@@ -21,6 +21,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 </head>
 <body id="page-top">
+<?php
+$domain = $_SERVER["HTTP_HOST"];
+$language = "ja";
+if ( stripos($domain , "ja.") === 0 ) {
+	echo("日本語");
+   $language = "ja";
+} else if ( stripos($domain , "en.") === 0 ) {
+   $language = "en";
+	echo("英語");
+}
+
+echo($language);
+
+$localize_json = file_get_contents("./localize/localize.json");
+
+// BOM除去
+if (preg_match("/^efbbbf/", bin2hex($localize_json[0] . $localize_json[1] . $localize_json[2])) === 1) {
+    $localize_json = substr($localize_json, 3);
+}
+
+// 改行除去
+$localize_json = str_replace("\n", "", $localize_json );
+
+
+
+// UTF8としてデコード。
+$localize_json = mb_convert_encoding($localize_json, 'UTF8');
+
+// JSONとしてデコード
+$localize_array = json_decode($localize_json, true);
+echo ($localize_array);
+// あまりいい形ではないので、アクセスしやすいように整えておく。
+foreach($localize_array as $value) {
+    echo($value["SIMBOL"]);
+    $localize_hash[$value["SIMBOL"]] = $value;
+}
+
+echo($localize_hash["TOP_DETAIL_01"][$language]);
+
+
+?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -56,7 +97,7 @@
             <div class="intro-text">
                 <div class="intro-lead-in"><i class="fa fa-bda3"></i> BLACK DIA COIN</div>
                 <div class="intro-heading text-uppercase">
-                    次世代のバー決済<br>
+                    <?php echo($localize_hash["TOP_DETAIL_01"][$language]); ?>
                 </div>
                 <!-- a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">もっと知る</a -->
             </div>
@@ -69,10 +110,7 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">ABOUT</h2>
                     <h3 class="section-subheading text-muted" style="font-size:1.3em">
-                        時代は現代進化し続ける世界、<br>BLACKDIAとはBAR決済COINとしてBDAを利用します。<br>
-                        <br>
-                        料金お支払い時、経費をこのBLACKDIAを利用するものとし、<br>
-                        その際に送金の速さを実現させます。
+                    <?php echo($localize_hash["ABOUT_DETAIL_01"][$language]); ?>
                     </h3>
                 </div>
             </div>
@@ -530,6 +568,16 @@
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
+                        <h4>たしろ</h4>
+                        <p class="text-muted">広報 / イベント</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                        </span>
                         <h4>ミニーマウス</h4>
                         <p class="text-muted">広報 / イベント / 集客</p>
                     </div>
@@ -542,16 +590,6 @@
                         </span>
                         <h4>LOOK</h4>
                         <p class="text-muted">アドバイザー / 開発サポート</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4>矢澤にこ</h4>
-                        <p class="text-muted">広報 / イベント</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
