@@ -197,9 +197,7 @@ $localize_hash = GetLocalizeHash();
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">RoadMap</h2>
                     <h3 class="section-subheading text-muted" style="font-size:1.3em">
-                        2021年 BAR オープン、そして様々な取引所へ！<br>
-                        我々のプロジェクトは上場がゴールではありません！<br>
-                        進化し続ける。 それが「BLACK DIA」です。
+                    <?php echo($localize_hash["ROADMAP_DETAIL_01"][$language]); ?>
                     </h3>
                 </div>
             </div>
@@ -213,14 +211,11 @@ $localize_hash = GetLocalizeHash();
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>2018-5-10</h4>
-                                    <h4 class="subheading">BLACK DIA COIN 誕生</h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_BORN_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        Wavesトークンとして、<br>
-                                        BLACK DIA COIN が誕生しました。<br>
-                                        発行枚数 １兆 枚。<br>
-                                        翌日より、取引所で売買開始しました。
+                                    <?php echo($localize_hash["ROADMAP_BORN_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -232,12 +227,11 @@ $localize_hash = GetLocalizeHash();
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>2018-5-12</h4>
-                                    <h4 class="subheading">Air drop 配布開始</h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_AIRDRIP_START_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        Discordコミュニティ参加者への50万BDA配布を皮切りにAirDropをスタート。<br>
-                                        その後、ルーレット・大型プレゼント・おみくじ など、様々なイベントで AirDrop 行なっています。
+                                    <?php echo($localize_hash["ROADMAP_AIRDROP_START_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -250,13 +244,12 @@ $localize_hash = GetLocalizeHash();
                                 <div class="timeline-heading">
                                     <h4>2018-6-1</h4>
                                     <h4 class="subheading">
-                                        公式キャラクター<br>ディアたん♡発表
+                                    <?php echo($localize_hash["ROADMAP_CHARA_TITLE"][$language]); ?>
                                     </h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        公式キャラクターとしてディアたん♡を発表しました。<br>
-                                        同キャラクターによる「おみくじ」「会話」のDiscordチャンネルを新設しました。
+                                    <?php echo($localize_hash["ROADMAP_CHARA_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -269,14 +262,12 @@ $localize_hash = GetLocalizeHash();
                                 <div class="timeline-heading">
                                     <h4>2018-6下旬</h4>
                                     <h4 class="subheading">
-                                        ホワイトペーパー発表<br>
-                                        公式webの発表
+                                    <?php echo($localize_hash["ROADMAP_WHITEPAPER_TITLE"][$language]); ?>
                                     </h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        BAR決済としての我々のプロジェクトの目的が公表されました。<br>
-                                        これまでにない次世代型決済内容が盛り込まれたホワイトペーパーを発行しました！
+                                    <?php echo($localize_hash["ROADMAP_WHITEPAPER_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -288,14 +279,11 @@ $localize_hash = GetLocalizeHash();
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>2018-7中旬</h4>
-                                    <h4 class="subheading">資金調達の実行</h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_FINANCE_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        ＣＥに上場に向け、トータル 4BTC の<br>
-                                        資金調達を予定です。<br>
-                                        ICOではなく、公募などを執り行う予定です。<br>
-                                        又、資金協力者にはBDAボーナスを送付する予定となっております。
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?></h4>
                                     </p>
                                 </div>
                             </div>
