@@ -55,6 +55,8 @@ function GetLocalizeHash() {
 	// UTF8としてデコード。
 	$localize_json = mb_convert_encoding($localize_json, 'UTF8');
 
+	// echo($localize_json);
+
 	// JSONとしてデコード
 	$localize_array = json_decode($localize_json, true);
 
@@ -283,7 +285,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?></h4>
+	                                    <?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -295,7 +297,7 @@ $localize_hash = GetLocalizeHash();
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>2018-7上旬</h4>
-                                    <h4 class="subheading">Airdrop配布終了予定</h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_AIRDROP_END_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">(配布終了時期を変更する可能性もございます。)</p>
