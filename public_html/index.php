@@ -22,41 +22,57 @@
 </head>
 <body id="page-top">
 <?php
-$domain = $_SERVER["HTTP_HOST"];
-$language = "ja";
-if ( stripos($domain , "ja.") === 0 ) {
-	echo("日本語");
-   $language = "ja";
-} else if ( stripos($domain , "en.") === 0 ) {
-   $language = "en";
-	echo("英語");
+// 現在アクセスしてるフルURL
+function GetCurrentURL() {
+    return $_SERVER["HTTP_HOST"];
 }
 
-echo($language);
+// 表示対象の言語(URL基準で決まる)
+function GetCurrentLanguage() {
+    $selfURL =  GetCurrentURL();
 
-$localize_json = file_get_contents("./localize/localize.json");
+	if ( stripos($selfURL , "ja.") === 0 ) {
+	   return "ja";
+	} else if ( stripos($selfURL , "en.") === 0 ) {
+	   return "en";
+	}
 
-// BOM除去
-if (preg_match("/^efbbbf/", bin2hex($localize_json[0] . $localize_json[1] . $localize_json[2])) === 1) {
-    $localize_json = substr($localize_json, 3);
+    return "ja";
 }
 
-// 改行除去
-$localize_json = str_replace("\n", "", $localize_json );
+// Jsonを経由して、PHPハッシュデータとして取得
+function GetLocalizeHash() {
+	$localize_json = file_get_contents("./localize/localize.json");
 
+	// BOM除去
+	if (preg_match("/^efbbbf/", bin2hex($localize_json[0] . $localize_json[1] . $localize_json[2])) === 1) {
+	    $localize_json = substr($localize_json, 3);
+	}
 
+	// 改行除去
+	$localize_json = str_replace("\n", "", $localize_json );
 
-// UTF8としてデコード。
-$localize_json = mb_convert_encoding($localize_json, 'UTF8');
+	// UTF8としてデコード。
+	$localize_json = mb_convert_encoding($localize_json, 'UTF8');
 
-// JSONとしてデコード
-$localize_array = json_decode($localize_json, true);
-echo ($localize_array);
-// あまりいい形ではないので、アクセスしやすいように整えておく。
-foreach($localize_array as $value) {
-    echo($value["SIMBOL"]);
-    $localize_hash[$value["SIMBOL"]] = $value;
+	// JSONとしてデコード
+	$localize_array = json_decode($localize_json, true);
+
+	// あまりいい形ではないので、アクセスしやすいように整えておく。
+	foreach($localize_array as $value) {
+	    echo($value["SIMBOL"]);
+	    $localize_hash[$value["SIMBOL"]] = $value;
+	}
+
+    return $localize_hash;
 }
+
+
+$language = GetCurrentLanguage();
+
+
+$localize_hash = GetLocalizeHash();
+
 
 echo($localize_hash["TOP_DETAIL_01"][$language]);
 
