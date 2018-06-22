@@ -60,7 +60,7 @@ function GetLocalizeHash() {
 
 	// あまりいい形ではないので、アクセスしやすいように整えておく。
 	foreach($localize_array as $value) {
-	    echo($value["SIMBOL"]);
+	    // echo($value["SIMBOL"]);
 	    $localize_hash[$value["SIMBOL"]] = $value;
 	}
 
@@ -70,13 +70,9 @@ function GetLocalizeHash() {
 
 $language = GetCurrentLanguage();
 
-
 $localize_hash = GetLocalizeHash();
 
-
-echo($localize_hash["TOP_DETAIL_01"][$language]);
-
-
+// echo($localize_hash["TOP_DETAIL_01"][$language]);
 ?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -139,7 +135,7 @@ echo($localize_hash["TOP_DETAIL_01"][$language]);
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">WHITEPAPER</h2>
-                    <h3 class="section-subheading text-muted" style="font-size:1.3em"><a href="#" style="color:#bea106"><i class="fa fa-download"></i> <u>ホワイトペーパー v1.1 PDFファイル</u></a></h3>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em"><a href="#" style="color:#bea106"><i class="fa fa-download"></i> <u><?php echo($localize_hash["WHITEPAPER_DOWNLOAD_01"][$language]); ?></u></a></h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -148,54 +144,48 @@ echo($localize_hash["TOP_DETAIL_01"][$language]);
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">独自アプリの開発</h4>
-                    <p class="text-muted" style="text-align:left">専用Walletのアプリを開発し、クーポンサイトやクーポンマガジンとの連動を目指し、誰でもアプリがあればお支払い出来るシステムを発行、又クーポンを発行し、より安く利用できるように私達は実現させます。</p>
+                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_APP_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_APP_DETAIL"][$language]); ?></p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">BDAを使うメリット</h4>
-                    <p class="text-muted" style="text-align:left">現在では仮想通貨でお支払いが出来ないお店がほとんどです。だんだん進化していく世界に新しい決済方法としてこのBDAを利用します。仮想通貨は短期的に価値があがり、決済には仮想通貨でしたいという方へ私達はこのコインで決済できるように実現していきます。</p>
+                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_MERIT_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_MERIT_DETAIL"][$language]); ?></p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">仮想通貨の現状</h4>
-                    <p class="text-muted" style="text-align:left">仮想通貨には安い送金手数料やキャッシュレスなどの利点がある一方、投機や脱税のために利用される欠点がある。これにより、本来、通貨は循環することによって価値が高まるが、通貨として利用できない状況になっている。</p>
+                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_ISSUE_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_ISSUE_DETAIL"][$language]); ?></p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-heartbeat fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">BDAの魅力</h4>
-                    <p class="text-muted" style="text-align:left">BLACKDIAは、誰でも簡単に支払いを行うための仕組みと仮想通貨をより多く得られるようにする仕組みを提供して、人々が通貨を使う頻度を増加させることで通貨自体の価値を半永久的に上昇させる。</p>
+                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_CHARM_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_CHARM_DETAIL"][$language]); ?></p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-credit-card fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">手数料は劣悪なサービス</h4>
-                    <p class="text-muted" style="text-align:left">
-                        現代の手数料は、極めて劣悪なサービスだ。BDAは圧倒的な優位性を持つ。
-                        現代のクレジットカードの決済手数料<br>
-                        ・飲食店では5％~10%程度<br>
-                        ・小売店では4％程度<br>
-                        極めて高い。BDAでは0.4%決済が可能にします。
-                    </p>
+                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_FEE_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_FEE_DETAIL"][$language]); ?></p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">セキリュティーの向上</h4>
-                    <p class="text-muted" style="text-align:left">ネットサーバーハッキング、サーバー攻撃をBDA専用Walletはセキリュティーに向上し二段階認証システムを導入、Walletを外部から守ります</p>
+                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_SECURITY_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_SECURITY_DETAIL"][$language]); ?></p>
                 </div>
             </div>
         </div>
@@ -549,23 +539,6 @@ echo($localize_hash["TOP_DETAIL_01"][$language]);
                         <!-- img class="mx-auto rounded-circle" src="img/team/01.png" alt="" -->
                         <h4>T T</h4>
                         <p class="text-muted">アドバイザー / 開発サポート</p>
-                        <!-- ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul-->
                     </div>
                 </div>
                 <div class="col-sm-4">
