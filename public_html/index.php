@@ -212,7 +212,7 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-5-10</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_BORN_TIME"][$language]); ?></h4>
                                     <h4 class="subheading"><?php echo($localize_hash["ROADMAP_BORN_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
@@ -228,7 +228,7 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-5-12</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_AIRDRIP_START_TIME"][$language]); ?></h4>
                                     <h4 class="subheading"><?php echo($localize_hash["ROADMAP_AIRDRIP_START_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
@@ -244,7 +244,7 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-6-1</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_CHARA_TIME"][$language]); ?></h4>
                                     <h4 class="subheading">
                                     <?php echo($localize_hash["ROADMAP_CHARA_TITLE"][$language]); ?>
                                     </h4>
@@ -262,7 +262,7 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-6下旬</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_WHITEPAPER_TIME"][$language]); ?></h4>
                                     <h4 class="subheading">
                                     <?php echo($localize_hash["ROADMAP_WHITEPAPER_TITLE"][$language]); ?>
                                     </h4>
@@ -280,12 +280,12 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-7中旬</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_FINANCE_TIME"][$language]); ?></h4>
                                     <h4 class="subheading"><?php echo($localize_hash["ROADMAP_FINANCE_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-	                                    <?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?>
+	                                <?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -296,11 +296,13 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-7上旬</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_AIRDROP_END_TIME"][$language]); ?></h4>
                                     <h4 class="subheading"><?php echo($localize_hash["ROADMAP_AIRDROP_END_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">(配布終了時期を変更する可能性もございます。)</p>
+                                    <p class="text-muted">
+                                    <?php echo($localize_hash["ROADMAP_AIRDROP_END_DETAIL"][$language]); ?>
+                                    </p>
                                 </div>
                             </div>
                         </li>
@@ -310,13 +312,12 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-8下旬</h4>
-                                    <h4 class="subheading">取引所ロゴ公式発表。</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_LOGO_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_LOGO_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        取引所などに掲載される「コインのロゴ」を発表予定です。<br>
-                                        コミュニティ内ユーザー投稿を踏まえた上で、私BDAが厳選したロゴを公開します。
+                                    <?php echo($localize_hash["ROADMAP_LOGO_TITLE"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -327,14 +328,12 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018-9上旬</h4>
-                                    <h4 class="subheading">イーサリアムトークンへ</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_COINSWAP_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_COINSWAP_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        BDAはイーサリアムトークンへと<br>
-                                        生まれ変わります。(ERC20ベース)<br>
-                                        各保有者の枚数に応じてETHへの等価交換(スワップ)を予定しています。
+                                    <?php echo($localize_hash["ROADMAP_COINSWAP_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -345,11 +344,11 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2018年内</h4>
-                                    <h4 class="subheading">CoinExchange上場へ</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">CoinExchangeを目指します。</p>
+                                    <p class="text-muted"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?></p>
                                 </div>
                             </div>
                         </li>
@@ -359,11 +358,13 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2019/1月-4月</h4>
-                                    <h4 class="subheading">BDA専用Walletの開発</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_WALLET_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_WALLET_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">BDA専用のWalletを開発します。</p>
+                                    <p class="text-muted">
+                                    <?php echo($localize_hash["ROADMAP_WALLET_DETAIL"][$language]); ?>
+                                    </p>
                                 </div>
                             </div>
                         </li>
@@ -373,11 +374,13 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2019/4月-7月</h4>
-                                    <h4 class="subheading">新たに取引所に上場を目指す</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">(なにかコメント)</p>
+                                    <p class="text-muted">
+                                    <?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?>
+                                    </p>
                                 </div>
                             </div>
                         </li>
@@ -387,13 +390,12 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2021年</h4>
-                                    <h4 class="subheading">仮想通貨BARをオープン</h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_BAROPEN_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_BAROPEN_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                        仮想通貨BDAで決済可能な酒場オープン。<br />
-                                        BLACK DIA COINでの決済を目指す。
+                                    <?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -424,56 +426,52 @@ $localize_hash = GetLocalizeHash();
                 </div>
                 <div class="col-sm-6">
                     <div class="team-member" style="text-align:left">
-                        <h4>トークン</h4>
+                        <h4><?php echo($localize_hash["SPEC_TOKEN_TITLE"][$language]); ?></h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                                名称：BDA<br>
-                                種別：Wavesトークン<br>
-                                枚数：１兆枚<br>
+                            <?php echo($localize_hash["SPEC_TOKEN_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4>開発費 <i class="fa fa-ellipsis-h"></i> 30%</h4>
+                        <h4><?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 30%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                                独自アプリケーションの開発、<br>決済システム研究・開発費として利用します。
+                            <?php echo($localize_hash["SPEC_DEVELOP_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4>上場時売却分 <i class="fa fa-ellipsis-h"></i> 45%</h4>
+                        <h4><?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 45%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                                最初の上場時に20％を売却します。<br>
-                                残りは、新たな取引所へ上場する為の資金として<br>
-                                必要に応じて順次売却します。
+                            <?php echo($localize_hash["SPEC_SELLEXC_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4>マーケティング費 <i class="fa fa-ellipsis-h"></i> 15%</h4>
+                        <h4><?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 15%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                                Air Drop、公式Twitter、Discord、<br>その他宣伝を含む配布分に利用します。
+                            <?php echo($localize_hash["SPEC_MARKETING_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4>運営チーム <i class="fa fa-ellipsis-h"></i> 10%</h4>
+                        <h4><?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 10%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                                協力者、開発チームに利用します。
+                            <?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
@@ -496,8 +494,8 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4>BDA / COIN</h4>
-                        <p class="text-muted">リーダー / 運営</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_BDA_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_BDA_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -506,8 +504,8 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4>こみやんま</h4>
-                        <p class="text-muted">開発 / Web / BOT</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -516,8 +514,8 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4>lovealco2</h4>
-                        <p class="text-muted">企画戦略</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_LOVEALCO2_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_LOVEALCO2_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -526,9 +524,8 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <!-- img class="mx-auto rounded-circle" src="img/team/01.png" alt="" -->
-                        <h4>T T</h4>
-                        <p class="text-muted">アドバイザー / 開発サポート</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_TT_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_TT_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -537,8 +534,8 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4>ルパン4世</h4>
-                        <p class="text-muted">モデレーター</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -547,8 +544,8 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4>たしろ</h4>
-                        <p class="text-muted">広報 / イベント</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_RUPIN_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_RUPIN_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -557,40 +554,35 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4>ミニーマウス</h4>
-                        <p class="text-muted">広報 / イベント / 集客</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_MINI_MOUSE_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_MINI_MOUSE_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
+                <!--div class="col-sm-4">
+                    <div class="team-member">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_LOOK_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_LOOK_DETAIL"][$language]); ?></p>
+                    </div>
+                </div-->
                 <div class="col-sm-4">
                     <div class="team-member">
                         <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4>LOOK</h4>
-                        <p class="text-muted">アドバイザー / 開発サポート</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4>Ykyky</h4>
-                        <p class="text-muted">営業 / 集客</p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_YKYKY_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_YKYKY_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <p class="large text-muted" style="font-size:1.0em">
-                        私達は、元はこのコミュニティ内で知り合ったばかりのチームです。<br>
-                        しかし、チームが思う事は一つ。<br>
-                        “もっとBARの良さを知って欲しい。楽しんで貰いたい。”                        <br>
-                        BARのメリットを知って欲しい思いから、<br>
-                        このプロジェクトが結成されました。<br>
-                        我々は気持ちを一つにし、この世界に革命を起こすため進化していきます！
+                    <?php echo($localize_hash["TEAM_DETAIL_02"][$language]); ?>
                     </p>
                 </div>
             </div>
@@ -675,7 +667,10 @@ $localize_hash = GetLocalizeHash();
         var chart = new Chart(myChart, {
             type: 'pie',
             data: {
-                labels: ["開発費", "上場時売却分", "マーケティング費", "運営チーム"],
+                labels: ["<?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]) ?>",
+                         "<?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]) ?>",
+                         "<?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]) ?>",
+                         "<?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>"],
                 datasets: [{
                     label: "",
                     backgroundColor: ["#3F51B5", "#F44336", "#FF9800", "#4CAF50"],
