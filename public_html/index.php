@@ -79,7 +79,7 @@ $localize_hash = GetLocalizeHash();
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" style="font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic;" href="#page-top"><i class="fa fa-bda3"></i> BLACK DIA COIN</a>
+            <a class="navbar-brand js-scroll-trigger" style="font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic;" href="#page-top"><i class="fa fa-bda2"></i> BLACK DIA COIN</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fa fa-bars"></i>
@@ -109,7 +109,7 @@ $localize_hash = GetLocalizeHash();
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in"><i class="fa fa-bda3"></i> BLACK DIA COIN</div>
+                <div class="intro-lead-in"><i class="fa fa-bda2"></i> BLACK DIA COIN</div>
                 <div class="intro-heading text-uppercase">
                     <?php echo($localize_hash["TOP_DETAIL_01"][$language]); ?>
                 </div>
@@ -374,12 +374,12 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TIME"][$language]); ?></h4>
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TITLE"][$language]); ?></h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_OTHEREXCHANGE_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_OTHEREXCHANGE_TITLE"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                    <?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?>
+                                    <?php echo($localize_hash["ROADMAP_OTHEREXCHANGE_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -395,7 +395,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted">
-                                    <?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?>
+                                    <?php echo($localize_hash["ROADMAP_BAROPEN_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -568,7 +568,7 @@ $localize_hash = GetLocalizeHash();
                         <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_LOOK_DETAIL"][$language]); ?></p>
                     </div>
                 </div-->
-                <div class="col-sm-4">
+                <!--div class="col-sm-4">
                     <div class="team-member">
                         <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -577,7 +577,7 @@ $localize_hash = GetLocalizeHash();
                         <h4><?php echo($localize_hash["TEAM_MEMBER_YKYKY_TITLE"][$language]); ?></h4>
                         <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_YKYKY_DETAIL"][$language]); ?></p>
                     </div>
-                </div>
+                </div-->
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
