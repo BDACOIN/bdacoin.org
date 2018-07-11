@@ -1,3 +1,3 @@
 # bdacoin.org
 
-* http://bdacoin.org のサイトデータ
+* http://bdacoin.org のサイト用のデータ
