@@ -667,9 +667,9 @@ $localize_hash = GetLocalizeHash();
         var chart = new Chart(myChart, {
             type: 'pie',
             data: {
-                labels: ["<?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]) ?>",
-                         "<?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]) ?>",
-                         "<?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]) ?>",
+                labels: ["<?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]); ?>",
+                         "<?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]); ?>",
+                         "<?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?>",
                          "<?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>"],
                 datasets: [{
                     label: "",
