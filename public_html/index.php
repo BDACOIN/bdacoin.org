@@ -456,7 +456,7 @@ $localize_hash = GetLocalizeHash();
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4><?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 15%</h4>
+                        <h4><?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 10%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
@@ -466,7 +466,7 @@ $localize_hash = GetLocalizeHash();
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4><?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 10%</h4>
+                        <h4><?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 15%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
@@ -670,7 +670,7 @@ $localize_hash = GetLocalizeHash();
                 labels: ["<?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]); ?>",
                          "<?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]); ?>",
                          "<?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?>",
-                         "<?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>"],
+                         "<?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?>"],
                 datasets: [{
                     label: "",
                     backgroundColor: ["#3F51B5", "#F44336", "#FF9800", "#4CAF50"],
