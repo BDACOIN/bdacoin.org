@@ -16,8 +16,8 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201806031024">
+    <link href="css/agency.css?v=2" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807222251">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 </head>
 <body id="page-top">
@@ -110,8 +110,8 @@ $localize_hash = GetLocalizeHash();
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in"><i class="fa fa-bda4"></i>BLACK DIA COIN</div>
-                <div class="intro-heading text-uppercase">
-                    <?php echo($localize_hash["TOP_DETAIL_01"][$language]); ?>
+                <div class="intro-lead-detail">
+                    <div style="font-size:0.8em"><?php echo($localize_hash["TOP_DETAIL_01"][$language]); ?></div>
                 </div>
                 <!-- a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">もっと知る</a -->
             </div>
@@ -198,9 +198,9 @@ $localize_hash = GetLocalizeHash();
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">RoadMap</h2>
-                    <h3 class="section-subheading text-muted" style="font-size:1.3em">
+                    <!-- h3 class="section-subheading text-muted" style="font-size:1.3em">
                     <?php echo($localize_hash["ROADMAP_DETAIL_01"][$language]); ?>
-                    </h3>
+                    </h3 -->
                 </div>
             </div>
             <div class="row">
@@ -482,8 +482,8 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4><?php echo($localize_hash["TEAM_MEMBER_LOVEALCO2_TITLE"][$language]); ?></h4>
-                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_LOVEALCO2_DETAIL"][$language]); ?></p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_PAUL_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_PAUL_DETAIL"][$language]); ?></p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -547,13 +547,13 @@ $localize_hash = GetLocalizeHash();
                     </div>
                 </div-->
             </div>
-            <div class="row">
+            <!--div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <p class="large text-muted" style="font-size:1.0em">
                     <?php echo($localize_hash["TEAM_DETAIL_02"][$language]); ?>
                     </p>
                 </div>
-            </div>
+            </div-->
         </div>
     </section>
     <footer>
@@ -651,6 +651,7 @@ $localize_hash = GetLocalizeHash();
                     text: "発行枚数 １兆枚"
                 },
                 legend: {
+                    onClick: (e) => e.stopPropagation()
                 },
                 maintainAspectRatio: true,
             },
