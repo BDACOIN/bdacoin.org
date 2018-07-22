@@ -79,7 +79,7 @@ $localize_hash = GetLocalizeHash();
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" style="font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic;" href="#page-top"><i class="fa fa-bda2"></i> BLACK DIA COIN</a>
+            <a class="navbar-brand js-scroll-trigger" style="font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic;" href="#page-top"><i class="fa fa-bda4"></i>BLACK DIA COIN</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fa fa-bars"></i>
@@ -109,7 +109,7 @@ $localize_hash = GetLocalizeHash();
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in"><i class="fa fa-bda2"></i> BLACK DIA COIN</div>
+                <div class="intro-lead-in"><i class="fa fa-bda4"></i>BLACK DIA COIN</div>
                 <div class="intro-heading text-uppercase">
                     <?php echo($localize_hash["TOP_DETAIL_01"][$language]); ?>
                 </div>
@@ -228,22 +228,6 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4><?php echo($localize_hash["ROADMAP_AIRDRIP_START_TIME"][$language]); ?></h4>
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_AIRDRIP_START_TITLE"][$language]); ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                    <?php echo($localize_hash["ROADMAP_AIRDROP_START_DETAIL"][$language]); ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/holding/13.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
                                     <h4><?php echo($localize_hash["ROADMAP_CHARA_TIME"][$language]); ?></h4>
                                     <h4 class="subheading">
                                     <?php echo($localize_hash["ROADMAP_CHARA_TITLE"][$language]); ?>
@@ -256,7 +240,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                             </div>
                         </li>
-                        <li class="timeline-inverted">
+                        <li>
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/03.png" alt="">
                             </div>
@@ -270,54 +254,6 @@ $localize_hash = GetLocalizeHash();
                                 <div class="timeline-body">
                                     <p class="text-muted">
                                     <?php echo($localize_hash["ROADMAP_WHITEPAPER_DETAIL"][$language]); ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/holding/04.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?php echo($localize_hash["ROADMAP_FINANCE_TIME"][$language]); ?></h4>
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_FINANCE_TITLE"][$language]); ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-	                                <?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/holding/07.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?php echo($localize_hash["ROADMAP_AIRDROP_END_TIME"][$language]); ?></h4>
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_AIRDROP_END_TITLE"][$language]); ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                    <?php echo($localize_hash["ROADMAP_AIRDROP_END_DETAIL"][$language]); ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/holding/08.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?php echo($localize_hash["ROADMAP_LOGO_TIME"][$language]); ?></h4>
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_LOGO_TITLE"][$language]); ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                    <?php echo($localize_hash["ROADMAP_LOGO_TITLE"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
@@ -340,7 +276,23 @@ $localize_hash = GetLocalizeHash();
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/holding/06.png" alt="">
+                                <img class="rounded-circle img-fluid" src="img/holding/04.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><?php echo($localize_hash["ROADMAP_FINANCE_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_FINANCE_TITLE"][$language]); ?></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+	                                <?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/09.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -352,7 +304,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                             </div>
                         </li>
-                        <li class="timeline-inverted">
+                        <li class="timeline">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/12.png" alt="">
                             </div>
@@ -368,7 +320,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/09.png" alt="">
                             </div>
@@ -384,7 +336,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                             </div>
                         </li>
-                        <li class="timeline-inverted">
+                        <li class="timeline">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/10.png" alt="">
                             </div>
@@ -396,6 +348,22 @@ $localize_hash = GetLocalizeHash();
                                 <div class="timeline-body">
                                     <p class="text-muted">
                                     <?php echo($localize_hash["ROADMAP_BAROPEN_DETAIL"][$language]); ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/12.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><?php echo($localize_hash["ROADMAP_WALLET2_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_WALLET2_TITLE"][$language]); ?></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                    <?php echo($localize_hash["ROADMAP_WALLET2_DETAIL"][$language]); ?>
                                     </p>
                                 </div>
                             </div>
