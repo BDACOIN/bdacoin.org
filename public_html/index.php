@@ -140,56 +140,6 @@ $localize_hash = GetLocalizeHash();
                     <h3 class="section-subheading text-muted" style="font-size:1.3em"><a href="#" style="color:#bea106"><i class="fa fa-download"></i> <u><?php echo($localize_hash["WHITEPAPER_DOWNLOAD_01"][$language]); ?></u></a></h3>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_APP_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_APP_DETAIL"][$language]); ?></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_MERIT_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_MERIT_DETAIL"][$language]); ?></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_ISSUE_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_ISSUE_DETAIL"][$language]); ?></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-heartbeat fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_CHARM_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_CHARM_DETAIL"][$language]); ?></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-credit-card fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_FEE_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_FEE_DETAIL"][$language]); ?></p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["WHITEPAPER_TOPIC_SECURITY_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left"><?php echo($localize_hash["WHITEPAPER_TOPIC_SECURITY_DETAIL"][$language]); ?></p>
-                </div>
-            </div>
         </div>
     </section>
     <!-- ReadMap -->
@@ -224,7 +174,7 @@ $localize_hash = GetLocalizeHash();
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/holding/02.png" alt="">
+                                <img class="rounded-circle img-fluid" src="img/holding/13.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
