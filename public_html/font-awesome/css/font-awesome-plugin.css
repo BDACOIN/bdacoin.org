@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'FontAwesomePlugin';
-  src: url('../fonts/fontawesome-plugin-webfont.eot?v=0.0.5.6');
-  src: url('../fonts/fontawesome-plugin-webfont.eot?#iefix&v=0.0.5.6') format('embedded-opentype'),
-       url('../fonts/fontawesome-plugin-webfont.woff?v=0.0.5.6') format('woff'),
-       url('../fonts/fontawesome-plugin-webfont.ttf?v=0.0.5.6') format('truetype');
+  src: url('../fonts/fontawesome-plugin-webfont.eot?v=0.0.5.8');
+  src: url('../fonts/fontawesome-plugin-webfont.eot?#iefix&v=0.0.5.8') format('embedded-opentype'),
+       url('../fonts/fontawesome-plugin-webfont.woff?v=0.0.5.8') format('woff'),
+       url('../fonts/fontawesome-plugin-webfont.ttf?v=0.0.5.8') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -64,4 +64,8 @@
   content:"\f01A";font:normal normal normal 1em FontAwesomePlugin;}
 .fa-bda4:before {
   content:"\f01B";font:normal normal normal 1em FontAwesomePlugin;}
+.fa-waves:before {
+  content:"\f01C";font:normal normal normal 1em FontAwesomePlugin;}
+.fa-ether:before {
+  content:"\f01D";font:normal normal normal 1em FontAwesomePlugin;}
 

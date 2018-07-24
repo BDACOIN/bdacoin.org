@@ -16,8 +16,8 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
-    <link href="css/agency.css?v=2" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807232037">
+    <link href="css/agency.css??v=201807242143" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807242051">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 </head>
 <body id="page-top">
@@ -136,7 +136,7 @@ $localize_hash = GetLocalizeHash();
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">WHITEPAPER</h2>
-                    <h3 class="section-subheading text-muted" style="font-size:1.3em"><a href="#" style="color:#bea106"><i class="fa fa-download"></i> <u><?php echo($localize_hash["WHITEPAPER_DOWNLOAD_01"][$language]); ?></u></a></h3>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em"><a href="<?php echo($localize_hash["WHITEPAPER_LINK_01"][$language]); ?>" style="color:#bea106"><i class="fa fa-download"></i> <u><?php echo($localize_hash["WHITEPAPER_DOWNLOAD_01"][$language]); ?></u></a></h3>
                 </div>
             </div>
         </div>
@@ -395,25 +395,19 @@ $localize_hash = GetLocalizeHash();
 
             <div class="row text-center">
                 <div class="col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["SPEC_WAVES_TOKEN_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left;">
+                    <h4 class="service-heading"></h4>
+                    <p class="text-muted" style="text-align:left">
+                        <span style="font-size:1.5em; color:#000000"><i class="fa fa-waves"></i> <?php echo($localize_hash["SPEC_WAVES_TOKEN_TITLE"][$language]); ?><br></span>
                         <?php echo($localize_hash["SPEC_WAVES_TOKEN_DETAIL"][$language]); ?>
-                        Asset ID：<span style="font-size:0.8em">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span><br>
+                        &nbsp;Asset ID：<span style="font-size:0.8em">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span>
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"><?php echo($localize_hash["SPEC_ETHER_TOKEN_TITLE"][$language]); ?></h4>
-                    <p class="text-muted" style="text-align:left;">
+                    <h4 class="service-heading"></h4>
+                    <p class="text-muted" style="text-align:left">
+                        <span style="font-size:1.5em; color:#000000"><i class="fa fa-ether"></i> <?php echo($localize_hash["SPEC_ETHER_TOKEN_TITLE"][$language]); ?><br></span>
                         <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL"][$language]); ?>
-                        Contract：<span style="font-size:0.8em">0xf6caa4bebd8fab8489bc4708344d9634315c4340</span><br>
+                        &nbsp;Contract：<span style="font-size:0.8em">0xf6caa4bebd8fab8489bc4708344d9634315c4340</span><br>
                     </p>
                 </div>
             </div>
