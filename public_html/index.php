@@ -129,7 +129,6 @@ $localize_hash = GetLocalizeHash();
                 </div>
             </div>
         </div>
-        </div>
     </section>
     <!-- Whitepaper Grid -->
     <section class="bg-light" id="whitepaper">
@@ -414,7 +413,7 @@ $localize_hash = GetLocalizeHash();
                     <h4 class="service-heading"><?php echo($localize_hash["SPEC_ETHER_TOKEN_TITLE"][$language]); ?></h4>
                     <p class="text-muted" style="text-align:left;">
                         <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL"][$language]); ?>
-                        Asset ID：<span style="font-size:0.8em">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span><br>
+                        Contract：<span style="font-size:0.8em">0xf6caa4bebd8fab8489bc4708344d9634315c4340</span><br>
                     </p>
                 </div>
             </div>
@@ -625,7 +624,7 @@ $localize_hash = GetLocalizeHash();
                     text: "発行枚数 １兆枚"
                 },
                 legend: {
-                    onClick: (e) => e.stopPropagation()
+                    onClick: function(e) { return e.stopPropagation(); }
                 },
                 maintainAspectRatio: true,
             },

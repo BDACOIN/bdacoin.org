@@ -624,7 +624,7 @@ $localize_hash = GetLocalizeHash();
                     text: "発行枚数 １兆枚"
                 },
                 legend: {
-                    onClick: (e) => e.stopPropagation()
+                    onClick: function(e) { return e.stopPropagation(); }
                 },
                 maintainAspectRatio: true,
             },
