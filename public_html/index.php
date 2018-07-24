@@ -148,9 +148,7 @@ $localize_hash = GetLocalizeHash();
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">RoadMap</h2>
-                    <!-- h3 class="section-subheading text-muted" style="font-size:1.3em">
-                    <?php echo($localize_hash["ROADMAP_DETAIL_01"][$language]); ?>
-                    </h3 -->
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">
@@ -349,7 +347,7 @@ $localize_hash = GetLocalizeHash();
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                            <?php echo($localize_hash["SPEC_TOKEN_DETAIL"][$language]); ?>
+                                <?php echo($localize_hash["SPEC_TOKEN_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
@@ -359,7 +357,7 @@ $localize_hash = GetLocalizeHash();
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                            <?php echo($localize_hash["SPEC_DEVELOP_DETAIL"][$language]); ?>
+                                <?php echo($localize_hash["SPEC_DEVELOP_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
@@ -369,7 +367,7 @@ $localize_hash = GetLocalizeHash();
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                            <?php echo($localize_hash["SPEC_SELLEXC_DETAIL"][$language]); ?>
+                                <?php echo($localize_hash["SPEC_SELLEXC_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
@@ -379,7 +377,7 @@ $localize_hash = GetLocalizeHash();
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                            <?php echo($localize_hash["SPEC_MARKETING_DETAIL"][$language]); ?>
+                                <?php echo($localize_hash["SPEC_MARKETING_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
@@ -389,12 +387,38 @@ $localize_hash = GetLocalizeHash();
                             <div class="col-sm-1">
                             </div>
                             <div class="col-sm-11">
-                            <?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>
+                                <?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading"><?php echo($localize_hash["SPEC_WAVES_TOKEN_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left;">
+                        <?php echo($localize_hash["SPEC_WAVES_TOKEN_DETAIL"][$language]); ?>
+                        Asset ID：<span style="font-size:0.8em">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span><br>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading"><?php echo($localize_hash["SPEC_ETHER_TOKEN_TITLE"][$language]); ?></h4>
+                    <p class="text-muted" style="text-align:left;">
+                        <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL"][$language]); ?>
+                        Asset ID：<span style="font-size:0.8em">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span><br>
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Team -->
     <section id="team">
