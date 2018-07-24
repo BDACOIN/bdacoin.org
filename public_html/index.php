@@ -17,7 +17,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="css/agency.css?v=2" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807222251">
+    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807232037">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 </head>
 <body id="page-top">
