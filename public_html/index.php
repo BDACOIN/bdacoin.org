@@ -1,26 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--nobanner-->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>BLACK DIA COIN</title>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <!-- Custom styles for this template -->
-    <link href="css/agency.css??v=201807242143" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807242051">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-</head>
-<body id="page-top">
 <?php
 // 現在アクセスしてるフルURL
 function GetCurrentURL() {
@@ -76,6 +56,26 @@ $localize_hash = GetLocalizeHash();
 
 // echo($localize_hash["TOP_DETAIL_01"][$language]);
 ?>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BLACK DIA COIN | <?php echo($language); ?></title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css??v=201807242143" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807250004">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+</head>
+<body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -335,6 +335,9 @@ $localize_hash = GetLocalizeHash();
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">SPEC</h2>
+                    <h3 class="section-subheading text-muted" style="font-size:1.3em">
+                    <?php echo($localize_hash["SPEC_DETAIL_01"][$language]); ?>
+                    </h3>
                 </div>
                 <div class="col-sm-6" style="text-align:center">
                     <canvas id="CoinPortFolioGraph" style="height: 60vmin; width: 60vmin;"></canvas>
@@ -397,17 +400,19 @@ $localize_hash = GetLocalizeHash();
                 <div class="col-md-6">
                     <h4 class="service-heading"></h4>
                     <p class="text-muted" style="text-align:left">
-                        <span style="font-size:1.5em; color:#000000"><i class="fa fa-waves"></i> <?php echo($localize_hash["SPEC_WAVES_TOKEN_TITLE"][$language]); ?><br></span>
-                        <?php echo($localize_hash["SPEC_WAVES_TOKEN_DETAIL"][$language]); ?>
-                        &nbsp;Asset ID：<span style="font-size:0.8em">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span>
+                        <span style="font-size:1.3em; color:#000000"><i class="fa fa-waves"></i> <?php echo($localize_hash["SPEC_WAVES_TOKEN_TITLE"][$language]); ?><br></span>
+                        <?php echo($localize_hash["SPEC_WAVES_TOKEN_DETAIL_01"][$language]); ?>
+                        Asset ID：<br class="visible-xs-block"><span class="contract">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span><br>
+                        <?php echo($localize_hash["SPEC_WAVES_TOKEN_DETAIL_02"][$language]); ?>
                     </p>
                 </div>
                 <div class="col-md-6">
                     <h4 class="service-heading"></h4>
                     <p class="text-muted" style="text-align:left">
-                        <span style="font-size:1.5em; color:#000000"><i class="fa fa-ether"></i> <?php echo($localize_hash["SPEC_ETHER_TOKEN_TITLE"][$language]); ?><br></span>
-                        <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL"][$language]); ?>
-                        &nbsp;Contract：<span style="font-size:0.8em">0xf6caa4bebd8fab8489bc4708344d9634315c4340</span><br>
+                        <span style="font-size:1.3em; color:#000000"><i class="fa fa-ether"></i> <?php echo($localize_hash["SPEC_ETHER_TOKEN_TITLE"][$language]); ?></span> <span style="font-size:1.0em;color:#000000">(ERC223)</span><span style="font-size:1.3em;"><br></span>
+                        <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_01"][$language]); ?>
+                        Contract：<br class="visible-xs-block"><span class="contract">0xF6CaA4bebD8Fab8489bC4708344d9634315c4340</span><br>
+                        <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_02"][$language]); ?>
                     </p>
                 </div>
             </div>
