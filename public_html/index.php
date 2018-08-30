@@ -81,6 +81,8 @@ $localize_hash = GetLocalizeHash();
     <meta name="description" content="">
     <meta name="author" content="">
     <title>BLACK DIA COIN | <?php echo($language); ?></title>
+    <meta name="description" content="BDA(BLACK DIA COIN) is a cryptocurrency token made to connect restaurant and customer.">
+    <meta name="keywords" content="BDA,BLACK DIA COIN,CRYPTOCURRENCY,仮想通貨,ビットコイン,BITCOIN,イーサ,ETHEREUM,ETHER,ERC20,ERC223,AIRDROP,エアドロ">
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -644,6 +646,11 @@ $localize_hash = GetLocalizeHash();
                         <li class="list-inline-item">
                             <a href="https://discord.gg/zcXbcbm">
                                 <i class="fa fa-discord"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/BlackDiacoin-677002095997100/">
+                                <i class="fa fa-facebook"></i>
                             </a>
                         </li>
                     </ul>
