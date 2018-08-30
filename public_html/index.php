@@ -7,6 +7,25 @@ function GetCurrentURL() {
     return $_SERVER["HTTP_HOST"];
 }
 
+function GetPriorityLanguage() {
+	$languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+	$languages = array_reverse($languages);
+	 
+	$result = '';
+	 
+	foreach ($languages as $language) {
+		if (preg_match('/^ja/i', $language)) {
+			$result = 'ja';
+		} elseif (preg_match('/^en/i', $language)) {
+			$result = 'en';
+		} elseif (preg_match('/^zh/i', $language)) {
+			$result = 'zh';
+		}
+	}
+}
+
+
+
 // 表示対象の言語(URL基準で決まる)
 function GetCurrentLanguage() {
     $selfURL =  GetCurrentURL();
@@ -101,6 +120,15 @@ $localize_hash = GetLocalizeHash();
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#team">TEAM</a>
                     </li>
+                    <li class="nav-item">
+                        <?php
+                        if ($language=="ja") {
+                            echo("<a class='nav-link js-scroll-trigger' href='http://en.bdacoin.org'>EN</a>");
+                        } else {
+                            echo("<a class='nav-link js-scroll-trigger' href='http://ja.bdacoin.org'>JA</a>");
+                        }
+                        ?>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -147,11 +175,13 @@ $localize_hash = GetLocalizeHash();
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">RoadMap</h2>
-                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
+	                <div class="col-lg-12 text-center">
+	                    <h2 class="section-heading text-uppercase">2018</h2>
+	                </div>
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
@@ -283,6 +313,16 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                             </div>
                         </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+	                <div class="col-lg-12 text-center">
+	                    <h2 class="section-heading text-uppercase">2019</h2>
+	                </div>
+                    <ul class="timeline">
+
                         <li class="timeline">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/10.png" alt="">
@@ -374,7 +414,7 @@ $localize_hash = GetLocalizeHash();
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4><?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 10%</h4>
+                        <h4><?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 15%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
@@ -384,7 +424,7 @@ $localize_hash = GetLocalizeHash();
                         </div>
                     </div>
                     <div class="team-member" style="text-align:left">
-                        <h4><?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 15%</h4>
+                        <h4><?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 10%</h4>
                         <div class="row">
                             <div class="col-sm-1">
                             </div>
@@ -402,7 +442,7 @@ $localize_hash = GetLocalizeHash();
                     <p class="text-muted" style="text-align:left">
                         <span style="font-size:1.3em; color:#000000"><i class="fa fa-waves"></i> <?php echo($localize_hash["SPEC_WAVES_TOKEN_TITLE"][$language]); ?><br></span>
                         <?php echo($localize_hash["SPEC_WAVES_TOKEN_DETAIL_01"][$language]); ?>
-                        Asset ID：<br class="visible-xs-block"><span class="contract">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span><br>
+                        <label style='width:65px'>Asset ID</label>：<br class="visible-xs-block"><span class="contract">ANdLVFpTmpxPsCwMZq7hHMfikSVz8LBZNykziPgnZ7sn</span><br>
                         <?php echo($localize_hash["SPEC_WAVES_TOKEN_DETAIL_02"][$language]); ?>
                     </p>
                 </div>
@@ -411,7 +451,7 @@ $localize_hash = GetLocalizeHash();
                     <p class="text-muted" style="text-align:left">
                         <span style="font-size:1.3em; color:#000000"><i class="fa fa-ether"></i> <?php echo($localize_hash["SPEC_ETHER_TOKEN_TITLE"][$language]); ?></span> <span style="font-size:1.0em;color:#000000">(ERC223)</span><span style="font-size:1.3em;"><br></span>
                         <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_01"][$language]); ?>
-                        Contract：<br class="visible-xs-block"><span class="contract">0xF6CaA4bebD8Fab8489bC4708344d9634315c4340</span><br>
+                        <label style='width:65px'>Contract</label>：<br class="visible-xs-block"><span class="contract">0xF6CaA4bebD8Fab8489bC4708344d9634315c4340</span><br>
                         <?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_02"][$language]); ?>
                     </p>
                 </div>
@@ -436,6 +476,18 @@ $localize_hash = GetLocalizeHash();
                         </span>
                         <h4><?php echo($localize_hash["TEAM_MEMBER_BDA_TITLE"][$language]); ?></h4>
                         <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_BDA_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/bda_dia">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://www.facebook.com/profile.php?id=100004455963003">
+	                    <i class="fa fa-facebook"></i>
+	                  </a>
+	                </li>
+	              </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -446,6 +498,18 @@ $localize_hash = GetLocalizeHash();
                         </span>
                         <h4><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_TITLE"][$language]); ?></h4>
                         <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://github.com/komiyamma">
+	                    <i class="fa fa-github-alt"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/komiyamma">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	              </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -456,6 +520,18 @@ $localize_hash = GetLocalizeHash();
                         </span>
                         <h4><?php echo($localize_hash["TEAM_MEMBER_PAUL_TITLE"][$language]); ?></h4>
                         <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_PAUL_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/lovealco2">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://github.com/lovealco2">
+	                    <i class="fa fa-github-alt"></i>
+	                  </a>
+	                </li>
+	              </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -466,16 +542,18 @@ $localize_hash = GetLocalizeHash();
                         </span>
                         <h4><?php echo($localize_hash["TEAM_MEMBER_TT_TITLE"][$language]); ?></h4>
                         <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_TT_DETAIL"][$language]); ?></p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_TITLE"][$language]); ?></h4>
-                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/GekikaraNoodle">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://github.com/tksw009">
+	                    <i class="fa fa-github-alt"></i>
+	                  </a>
+	                </li>
+	              </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -486,6 +564,18 @@ $localize_hash = GetLocalizeHash();
                         </span>
                         <h4><?php echo($localize_hash["TEAM_MEMBER_RUPIN_TITLE"][$language]); ?></h4>
                         <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_RUPIN_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/akiairdrop">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://github.com/lupin68458">
+	                    <i class="fa fa-github-alt"></i>
+	                  </a>
+	                </li>
+	              </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -494,30 +584,40 @@ $localize_hash = GetLocalizeHash();
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4><?php echo($localize_hash["TEAM_MEMBER_MINI_MOUSE_TITLE"][$language]); ?></h4>
-                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_MINI_MOUSE_DETAIL"][$language]); ?></p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/yazawanicoin">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://github.com/tashiro12">
+	                    <i class="fa fa-github-alt"></i>
+	                  </a>
+	                </li>
+	              </ul>
                     </div>
                 </div>
-                <!--div class="col-sm-4">
+                <div class="col-sm-4">
                     <div class="team-member">
                         <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                             <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4><?php echo($localize_hash["TEAM_MEMBER_LOOK_TITLE"][$language]); ?></h4>
-                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_LOOK_DETAIL"][$language]); ?></p>
+                        <h4><?php echo($localize_hash["TEAM_MEMBER_PAPARAZZI_TITLE"][$language]); ?></h4>
+                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_PAPARAZZI_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/rujakdulit">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	              </ul>
+
                     </div>
-                </div-->
-                <!--div class="col-sm-4">
-                    <div class="team-member">
-                        <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4><?php echo($localize_hash["TEAM_MEMBER_YKYKY_TITLE"][$language]); ?></h4>
-                        <p class="text-muted"><?php echo($localize_hash["TEAM_MEMBER_YKYKY_DETAIL"][$language]); ?></p>
-                    </div>
-                </div-->
+                </div>
             </div>
             <!--div class="row">
                 <div class="col-lg-8 mx-auto text-center">
