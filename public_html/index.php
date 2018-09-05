@@ -616,6 +616,16 @@ $localize_hash = GetLocalizeHash();
 	                    <i class="fa fa-twitter"></i>
 	                  </a>
 	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://www.facebook.com/rujak.dulit">
+	                    <i class="fa fa-facebook"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://github.com/sinopsisfilm">
+	                    <i class="fa fa-github-alt"></i>
+	                  </a>
+	                </li>
 	              </ul>
 
                     </div>
@@ -651,6 +661,11 @@ $localize_hash = GetLocalizeHash();
                         <li class="list-inline-item">
                             <a href="https://www.facebook.com/BlackDiacoin-677002095997100/">
                                 <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/BDACOIN">
+                                <i class="fa fa-github-alt"></i>
                             </a>
                         </li>
                     </ul>
