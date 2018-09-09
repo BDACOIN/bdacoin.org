@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'FontAwesomePlugin';
-  src: url('../fonts/fontawesome-plugin-webfont.eot?v=0.0.5.8');
-  src: url('../fonts/fontawesome-plugin-webfont.eot?#iefix&v=0.0.5.8') format('embedded-opentype'),
-       url('../fonts/fontawesome-plugin-webfont.woff?v=0.0.5.8') format('woff'),
-       url('../fonts/fontawesome-plugin-webfont.ttf?v=0.0.5.8') format('truetype');
+  src: url('../fonts/fontawesome-plugin-webfont.eot?v=0.0.6.1');
+  src: url('../fonts/fontawesome-plugin-webfont.eot?#iefix&v=0.0.6.1') format('embedded-opentype'),
+       url('../fonts/fontawesome-plugin-webfont.woff?v=0.0.6.1') format('woff'),
+       url('../fonts/fontawesome-plugin-webfont.ttf?v=0.0.6.1') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -68,4 +68,6 @@
   content:"\f01C";font:normal normal normal 1em FontAwesomePlugin;}
 .fa-ether:before {
   content:"\f01D";font:normal normal normal 1em FontAwesomePlugin;}
+.fa-telegram-alt:before {
+  content:"\f01E";font:normal normal normal 1em FontAwesomePlugin;}
 

@@ -93,7 +93,7 @@ $localize_hash = GetLocalizeHash();
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="css/agency.css??v=201809100027" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201807250004">
+    <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201809100249">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 </head>
 <body id="page-top">
@@ -661,6 +661,11 @@ $localize_hash = GetLocalizeHash();
                         <li class="list-inline-item">
                             <a href="https://github.com/BDACOIN">
                                 <i class="fa fa-github-alt"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://t.me/joinchat/Gkw2Tk87hqPCjF1tmU-Vdg">
+                                <i class="fa fa-telegram-alt"></i>
                             </a>
                         </li>
                     </ul>
