@@ -8,6 +8,11 @@ body {
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+p.block-left-txt {
+    display: inline-block;
+    text-align: left;
+}
+
 span.contract {
     font-size:0.7em;
 }
@@ -190,7 +195,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg-bda.jpg");
+  background-image: url("../img/header-bg-bda.jpg?v=2");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
