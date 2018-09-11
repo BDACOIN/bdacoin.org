@@ -125,9 +125,9 @@ $localize_hash = GetLocalizeHash();
                     <li class="nav-item">
                         <?php
                         if ($language=="ja") {
-                            echo("<a class='nav-link js-scroll-trigger' href='http://en.bdacoin.org'>EN</a>");
+                            echo("<a class='nav-link js-scroll-trigger' href='http://en.bdacoin.org'>ENGLISH</a>");
                         } else {
-                            echo("<a class='nav-link js-scroll-trigger' href='http://ja.bdacoin.org'>JA</a>");
+                            echo("<a class='nav-link js-scroll-trigger' href='http://ja.bdacoin.org'>JAPANESE</a>");
                         }
                         ?>
                     </li>
@@ -480,7 +480,7 @@ $localize_hash = GetLocalizeHash();
 	                  </a>
 	                </li>
 	                <li class="list-inline-item">
-	                  <a href="https://www.facebook.com/profile.php?id=100004455963003">
+	                  <a href="https://www.facebook.com/BlackDiacoin-677002095997100/">
 	                    <i class="fa fa-facebook"></i>
 	                  </a>
 	                </li>
