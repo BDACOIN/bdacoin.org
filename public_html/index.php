@@ -187,7 +187,7 @@ $localize_hash = GetLocalizeHash();
 	                    <h2 class="section-heading text-uppercase">2018</h2>
 	                </div>
                     <ul class="timeline">
-                        <li>
+                        <li class="timeline">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/01.png" alt="">
                             </div>
@@ -221,7 +221,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="timeline">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/03.png" alt="">
                             </div>
@@ -255,7 +255,7 @@ $localize_hash = GetLocalizeHash();
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="timeline">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/04.png" alt="">
                             </div>
@@ -287,22 +287,6 @@ $localize_hash = GetLocalizeHash();
                         </li>
                         <li class="timeline">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/holding/12.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4><?php echo($localize_hash["ROADMAP_WALLET_TIME"][$language]); ?></h4>
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_WALLET_TITLE"][$language]); ?></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">
-                                    <?php echo($localize_hash["ROADMAP_WALLET_DETAIL"][$language]); ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/09.png" alt="">
                             </div>
                             <div class="timeline-panel">
@@ -326,7 +310,22 @@ $localize_hash = GetLocalizeHash();
 	                    <h2 class="section-heading text-uppercase">2019</h2>
 	                </div>
                     <ul class="timeline">
-
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/holding/12.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><?php echo($localize_hash["ROADMAP_WALLET_TIME"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_WALLET_TITLE"][$language]); ?></h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                    <?php echo($localize_hash["ROADMAP_WALLET_DETAIL"][$language]); ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
                         <li class="timeline">
                             <div class="timeline-image">
                                 <img class="rounded-circle img-fluid" src="img/holding/10.png" alt="">
