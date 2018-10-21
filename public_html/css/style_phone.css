@@ -1,0 +1,26 @@
+.intro h1 {
+	font-family: 'Raleway', cursive;
+	color: #fff;
+	font-size: 2.4em;
+	font-weight: 300;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+#restaurant-whitepaper .section-title {
+	background: #444 url(../img/whitepaper-bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+#restaurant-roadmap .section-title {
+	background: #444 url(../img/roadmap-bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+#restaurant-spec .section-title {
+	background: #444 url(../img/spec-bg.jpg)  center center no-repeat;
+	background-size: cover;
+}
+#team {
+	color: #fff;
+	background: url(../img/team-bg.jpg) no-repeat center center;
+	background-size: cover;
+}

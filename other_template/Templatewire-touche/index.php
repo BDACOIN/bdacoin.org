@@ -50,7 +50,7 @@ function GetCurrentLanguage() {
 	   return "en";
 	}
 
-    return "en";
+    return "ja";
 }
 
 // Jsonを経由して、PHPハッシュデータとして取得
@@ -192,14 +192,15 @@ $localize_hash = GetLocalizeHash();
     <div class="overlay">
       <h2>RoadMap</h2>
       <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      <p><?php echo($localize_hash["ROADMAP_DETAIL_01"][$language]); ?></p>
     </div>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="roadmap-section">
-          <h2 class="roadmap-section-title">2018 5-8</h2>
+          <h2 class="roadmap-section-title">2018</h2>
+          <h4 class="roadmap-subsection-title"><?php echo($localize_hash["ROADMAP_BORN_TERM_01"][$language]); ?></h4>
           <hr>
           <!--div class="menu-images"><img src="img/menu/beer.png" alt="Hot Drinks"></div-->
           <div class="roadmap-item">
@@ -226,7 +227,8 @@ $localize_hash = GetLocalizeHash();
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="roadmap-section">
-          <h2 class="roadmap-section-title">2018 9-12</h2>
+          <h2 class="roadmap-section-title">2018</h2>
+          <h4 class="roadmap-subsection-title"><?php echo($localize_hash["ROADMAP_BORN_TERM_02"][$language]); ?></h4>
           <hr>
           <!--div class="menu-images"><img src="img/menu/beer.png" alt="Hot Drinks"></div-->
           <div class="roadmap-item">
@@ -250,7 +252,7 @@ $localize_hash = GetLocalizeHash();
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="roadmap-section">
-          <h2 class="roadmap-section-title">2019</h2>
+          <h2 class="roadmap-section-title"><?php echo($localize_hash["ROADMAP_BORN_TERM_03"][$language]); ?></h2>
           <hr>
           <div class="roadmap-item">
             <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_MOREEXCHANGE_TITLE"][$language]); ?></div>
@@ -371,7 +373,7 @@ $localize_hash = GetLocalizeHash();
       <div class="col-md-10 col-md-offset-1 section-title">
         <h2>Team</h2>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
+        <p><?php echo($localize_hash["TEAM_DETAIL_02"][$language]); ?></p>
       </div>
       <div id="row">
         <div class="col-md-3 team">
@@ -636,7 +638,7 @@ $localize_hash = GetLocalizeHash();
         options: {
             title: {
                 display: false,
-                text: "発行枚数 １兆枚"
+                text: "Total 40000000000"
             },
             legend: {
                 onClick: function(e) { return e.stopPropagation(); }
