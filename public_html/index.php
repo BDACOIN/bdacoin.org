@@ -78,7 +78,6 @@ $localize_hash = GetLocalizeHash();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <meta name="author" content="">
     <title>BLACK DIA COIN | <?php echo($language); ?></title>
     <meta name="description" content="BDA(BLACK DIA COIN) is a cryptocurrency token made to connect restaurant and customer.">
@@ -100,7 +99,7 @@ $localize_hash = GetLocalizeHash();
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" style="font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic;" href="#page-top"><i class="fa fa-bda4"></i>BLACK DIA COIN</a>
+            <a class="navbar-brand js-scroll-trigger" style="font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic;" href="#page-top"><i class="fa fa-bda4"></i>BLACK DIA</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fa fa-bars"></i>
@@ -277,8 +276,8 @@ $localize_hash = GetLocalizeHash();
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TIME"][$language]); ?></h4>
-                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TITLE"][$language]); ?></h4>
+                                    <h4><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TITLE"][$language]); ?></h4>
+                                    <h4 class="subheading"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TIME"][$language]); ?></h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p class="text-muted"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?></p>

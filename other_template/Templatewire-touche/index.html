@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--nobanner-->
+<?php
+// 現在アクセスしてるフルURL
+function GetCurrentURL() {
+    return $_SERVER["HTTP_HOST"];
+}
+
+function GetPriorityLanguage() {
+	$languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+	$languages = array_reverse($languages);
+	 
+	$result = '';
+	 
+	foreach ($languages as $language) {
+		if (preg_match('/^ja/i', $language)) {
+			$result = 'ja';
+		} elseif (preg_match('/^en/i', $language)) {
+			$result = 'en';
+		} elseif (preg_match('/^zh/i', $language)) {
+			$result = 'zh';
+		}
+	}
+}
+
+
+
+// 表示対象の言語(URL基準で決まる)
+function GetCurrentLanguage() {
+    $selfURL =  GetCurrentURL();
+
+	if ( stripos($selfURL , "ja.") === 0 ) {
+	   return "ja";
+	} else if ( stripos($selfURL , "en.") === 0 ) {
+	   return "en";
+	}
+
+    return "ja";
+}
+
+// Jsonを経由して、PHPハッシュデータとして取得
+function GetLocalizeHash() {
+	$localize_json = file_get_contents("./localize/localize.json");
+
+	// BOM除去
+	if (preg_match("/^efbbbf/", bin2hex($localize_json[0] . $localize_json[1] . $localize_json[2])) === 1) {
+	    $localize_json = substr($localize_json, 3);
+	}
+
+	// 改行除去
+	$localize_json = str_replace("\n", "", $localize_json );
+
+	// UTF8としてデコード。
+	$localize_json = mb_convert_encoding($localize_json, 'UTF8');
+
+	// echo($localize_json);
+
+	// JSONとしてデコード
+	$localize_array = json_decode($localize_json, true);
+
+	// あまりいい形ではないので、アクセスしやすいように整えておく。
+	foreach($localize_array as $value) {
+	    // echo($value["SIMBOL"]);
+	    $localize_hash[$value["SIMBOL"]] = $value;
+	}
+
+    return $localize_hash;
+}
+
+
+$language = GetCurrentLanguage();
+
+$localize_hash = GetLocalizeHash();
+
+// echo($localize_hash["TOP_DETAIL_01"][$language]);
+?>
+<html lang="<?php echo($language); ?>">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Touché</title>
-<meta name="description" content="">
-<meta name="author" content="">
+<title>BLACK DIA COIN | <?php echo($language); ?></title>
+<meta name="description" content="BDA(BLACK DIA COIN) is a cryptocurrency token made to connect restaurant and customer.">
+<meta name="keywords" content="BDA,BLACK DIA COIN,CRYPTOCURRENCY,仮想通貨,ビットコイン,BITCOIN,イーサ,ETHEREUM,ETHER,ERC20,ERC223,AIRDROP,エアドロ">
 
 <!-- Favicons
     ================================================== -->
@@ -26,6 +101,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,6 +124,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about" class="page-scroll">About</a></li>
+        <li><a href="#restaurant-whitepaper" class="page-scroll">WhitePaper</a></li>
+        <li><a href="#restaurant-roadmap" class="page-scroll">RoadMap</a></li>
+        <li><a href="#restaurant-spec" class="page-scroll">Spec</a></li>
         <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
         <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
         <li><a href="#team" class="page-scroll">Chefs</a></li>
@@ -64,9 +143,9 @@
       <div class="container">
         <div class="row">
           <div class="intro-text">
-            <h1>Touché</h1>
-            <p>Restaurant / Coffee / Pub</p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll">Discover Story</a> </div>
+            <h1>BLACK DIA</h1>
+            <p><?php echo($localize_hash["TOP_DETAIL_01"][$language]); ?></p>
+	  </div>
         </div>
       </div>
     </div>
@@ -81,9 +160,11 @@
       </div>
       <div class="col-xs-12 col-md-6">
         <div class="about-text">
-          <h2>Our Restaurant</h2>
+          <h2>ABOUT</h2>
           <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+          <p>
+               <?php echo($localize_hash["ABOUT_DETAIL_01"][$language]); ?>
+	  </p>
           <h3>Awarded Chefs</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
         </div>
@@ -91,11 +172,35 @@
     </div>
   </div>
 </div>
-<!-- Restaurant Menu Section -->
-<div id="restaurant-menu">
+
+
+<!-- Restaurant WhitePaper Section -->
+<div id="restaurant-whitepaper">
   <div class="section-title text-center center">
     <div class="overlay">
-      <h2>Menu</h2>
+      <h2>WhitePaper</h2>
+      <hr>
+      <p><?php echo($localize_hash["ROADMAP_NEXT_DETAIL"][$language]); ?></p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="whitepaper-section">
+          <p><a href="<?php echo($localize_hash["WHITEPAPER_LINK_01"][$language]); ?>" style="color:#bea106"><i class="fa fa-download"></i> <u><?php echo($localize_hash["WHITEPAPER_DOWNLOAD_01"][$language]); ?></u></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Restaurant RoadMap Section -->
+<div id="restaurant-roadmap">
+  <div class="section-title text-center center">
+    <div class="overlay">
+      <h2>RoadMap</h2>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
     </div>
@@ -103,398 +208,256 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Breakfast & Starters</h2>
+        <div class="roadmap-section">
+          <h2 class="roadmap-section-title">Breakfast & Starters</h2>
           <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $35 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Main Course</h2>
+        <div class="roadmap-section">
+          <h2 class="roadmap-section-title">Main Course</h2>
           <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $45 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Dinner</h2>
+        <div class="roadmap-section">
+          <h2 class="roadmap-section-title">Dinner</h2>
           <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $45 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $350 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $350 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Coffee & Drinks</h2>
+        <div class="roadmap-section">
+          <h2 class="roadmap-section-title">Coffee & Drinks</h2>
           <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $35 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+          <div class="roadmap-item">
+            <div class="roadmap-item-name"> Delicious Dish </div>
+            <div class="roadmap-item-price"> $30 </div>
+            <div class="roadmap-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- Portfolio Section -->
-<div id="portfolio">
+
+
+
+
+<!-- Restaurant Spec Section -->
+<div id="restaurant-spec">
   <div class="section-title text-center center">
     <div class="overlay">
-      <h2>Gallery</h2>
+      <h2>Spec</h2>
       <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      <p><?php echo($localize_hash["SPEC_DETAIL_01"][$language]); ?></p>
     </div>
   </div>
   <div class="container">
     <div class="row">
-      <div class="categories">
-        <ul class="cat">
-          <li>
-            <ol class="type">
-              <li><a href="#" data-filter="*" class="active">All</a></li>
-              <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
-              <li><a href="#" data-filter=".lunch">Lunch</a></li>
-              <li><a href="#" data-filter=".dinner">Dinner</a></li>
-            </ol>
-          </li>
-        </ul>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-      </div>
+
+
+                <div class="col-sm-6" style="text-align:center">
+                    <canvas id="CoinPortFolioGraph" style="height: 60vmin; width: 60vmin;"></canvas>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_TOKEN_TITLE"][$language]); ?></h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_TOKEN_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 30%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_DEVELOP_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 45%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_SELLEXC_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 15%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_MARKETING_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 10%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="text-align:center">
+                    <canvas id="CoinPortFolioGraph" style="height: 60vmin; width: 60vmin;"></canvas>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_TOKEN_TITLE"][$language]); ?></h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_TOKEN_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 30%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_DEVELOP_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 45%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_SELLEXC_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 15%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_MARKETING_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" style="text-align:left">
+                        <h4><?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?> <i class="fa fa-ellipsis-h"></i> 10%</h4>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-11">
+                                <?php echo($localize_hash["SPEC_TEAM_DETAIL"][$language]); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
     </div>
   </div>
 </div>
-<!-- Portfolio Section -->
-<div id="portfolio">
-  <div class="section-title text-center center">
-    <div class="overlay">
-      <h2>Gallery</h2>
-      <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="categories">
-        <ul class="cat">
-          <li>
-            <ol class="type">
-              <li><a href="#" data-filter="*" class="active">All</a></li>
-              <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
-              <li><a href="#" data-filter=".lunch">Lunch</a></li>
-              <li><a href="#" data-filter=".dinner">Dinner</a></li>
-            </ol>
-          </li>
-        </ul>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
+
+
 <!-- Team Section -->
 <div id="team" class="text-center">
   <div class="overlay">
     <div class="container">
       <div class="col-md-10 col-md-offset-1 section-title">
-        <h2>Meet Our Chefs</h2>
+        <h2>Team</h2>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
       </div>
@@ -615,5 +578,76 @@
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
+
+    <script language="javascript">
+        var dataLabelPlugin = {
+            afterDatasetsDraw: function (chart, easing) {
+                // To only draw at the end of animation, check for easing === 1
+                var ctx = chart.ctx;
+
+                chart.data.datasets.forEach(function (dataset, i) {
+                    var dataSum = 0;
+                    dataset.data.forEach(function (element) {
+                        dataSum += element;
+                    });
+
+                    var meta = chart.getDatasetMeta(i);
+                    if (!meta.hidden) {
+                        meta.data.forEach(function (element, index) {
+                            // Draw the text in black, with the specified font
+                            ctx.fillStyle = 'rgb(255, 255, 255)';
+
+                            var fontSize = 14;
+                            var fontStyle = 'normal';
+                            var fontFamily = 'Helvetica Neue';
+                            ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+                            // Just naively convert to string for now
+                            var labelString = chart.data.labels[index];
+                            var dataString = (Math.round(dataset.data[index] / dataSum * 1000) / 10).toString() + "%";
+
+                            // Make sure alignment settings are correct
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+
+                            var padding = 5;
+                            var position = element.tooltipPosition();
+                            ctx.fillText(labelString, position.x, position.y - (fontSize / 2) - padding);
+                            ctx.fillText(dataString, position.x, position.y + (fontSize / 2) - padding);
+                        });
+                    }
+                });
+            }
+        };
+
+        // Chart
+        var myChart = "CoinPortFolioGraph";
+        var chart = new Chart(myChart, {
+            type: 'pie',
+            data: {
+                labels: ["<?php echo($localize_hash["SPEC_DEVELOP_TITLE"][$language]); ?>",
+                         "<?php echo($localize_hash["SPEC_SELLEXC_TITLE"][$language]); ?>",
+                         "<?php echo($localize_hash["SPEC_MARKETING_TITLE"][$language]); ?>",
+                         "<?php echo($localize_hash["SPEC_TEAM_TITLE"][$language]); ?>"],
+                datasets: [{
+                    label: "",
+                    backgroundColor: ["#3F51B5", "#F44336", "#FF9800", "#4CAF50"],
+                    data: [30, 45, 15, 10],
+                }]
+            },
+            options: {
+                title: {
+                    display: false,
+                    text: "発行枚数 １兆枚"
+                },
+                legend: {
+                    onClick: function(e) { return e.stopPropagation(); }
+                },
+                maintainAspectRatio: true,
+            },
+            plugins: [dataLabelPlugin],
+        });
+    </script>
+
 </body>
 </html>
