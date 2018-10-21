@@ -10,7 +10,7 @@ body, html {
 h2 {
 	margin: 0 0 20px 0;
 	font-weight: 500;
-	font-size: 28px;
+	font-size: 34px;
 	color: #333;
 	text-transform: uppercase;
 }
@@ -89,9 +89,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	outline: none;
 	outline-offset: none;
 }
-
-
-
 /* Navigation */
 #menu {
 	padding: 20px;
@@ -102,7 +99,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	border-color: rgba(231, 231, 231, 0);
 }
 #menu a.navbar-brand {
-	font-size: 24px;
+	font-family: 'Dancing Script', cursive;
+	font-size: 36px;
 	color: #8eb640;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -120,7 +118,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #menu.navbar-default .navbar-nav > li > a:hover {
 	color: #8eb640;
 }
-
 .on {
 	background-color: #262626 !important;
 	padding: 0 !important;
@@ -133,7 +130,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .navbar-toggle {
 	border-radius: 0;
 }
-
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	background-color: #8eb640;
 	border-color: #8eb640;
@@ -146,7 +142,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .section-title .overlay {
 	padding: 80px 0;
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.7);
 }
 .section-title p {
 	font-size: 22px;
@@ -187,17 +183,23 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	-o-background-size: cover;
 }
 .intro .overlay {
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.4);
 }
-
+.intro h1 {
+	font-family: 'Dancing Script', cursive;
+	color: #fff;
+	font-size: 10em;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
 .intro span {
 	color: #a7c44c;
 	font-weight: 600;
 }
-
 .intro p {
 	color: #fff;
-	font-size: 22px;
+	font-size: 32px;
 	font-weight: 300;
 	margin-top: 10px;
 	margin-bottom: 40px;
@@ -235,32 +237,32 @@ header .intro-text {
 	line-height: 24px;
 	margin: 15px 0 30px;
 }
-
-
-/* WhitePaper Section */
-#restaurant-whitepaper {
-	padding: 0 0 80px 0;
+/* Menu Section */
+#restaurant-menu {
+	padding: 0 0 60px 0;
 }
-
-
-#restaurant-whitepaper .section-title h2 {
+#restaurant-menu .section-title {
+	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
+	background-size: cover;
+}
+#restaurant-menu .section-title h2 {
 	color: #fff;
 }
-#restaurant-whitepaper img {
+#restaurant-menu img {
 	width: 300px;
 	box-shadow: 15px 0 #a7c44c;
 }
-#restaurant-whitepaper h3 {
+#restaurant-menu h3 {
 	padding: 10px 0;
 	text-transform: uppercase;
 }
-#restaurant-whitepaper .whitepaper-section hr {
+#restaurant-menu .menu-section hr {
 	margin: 0 auto;
 }
-#restaurant-whitepaper .whitepaper-section {
+#restaurant-menu .menu-section {
 	margin: 0 20px 80px;
 }
-#restaurant-whitepaper .whitepaper-section-title {
+#restaurant-menu .menu-section-title {
 	font-size: 26px;
 	display: block;
 	font-weight: 500;
@@ -268,163 +270,32 @@ header .intro-text {
 	margin: 20px 0;
 	text-align: center;
 }
-#restaurant-whitepaper .whitepaper-item {
+#restaurant-menu .menu-item {
 	margin: 35px 0;
 	font-size: 18px;
 }
-#restaurant-whitepaper .whitepaper-item-name {
+#restaurant-menu .menu-item-name {
 	font-weight: 600;
 	font-size: 17px;
 	color: #555;
 	border-bottom: 2px dotted rgb(213, 213, 213);
 }
-#restaurant-whitepaper .whitepaper-item-description {
+#restaurant-menu .menu-item-description {
+	font-style: italic;
 	font-size: 15px;
 }
-#restaurant-whitepaper .whitepaper-item-price {
+#restaurant-menu .menu-item-price {
 	float: right;
 	font-weight: 600;
 	color: #555;
 	margin-top: -26px;
 }
-
-
-
-
-/* WhitePaper Section */
-#restaurant-roadmap {
-	padding: 0 0 80px 0;
-}
-
-
-#restaurant-roadmap .section-title h2 {
-	color: #fff;
-}
-#restaurant-roadmap h3 {
-	padding: 10px 0;
-	text-transform: uppercase;
-}
-#restaurant-roadmap .roadmap-section hr {
-	margin: 0 auto;
-}
-#restaurant-roadmap .roadmap-section {
-	margin: 0 20px 80px;
-}
-#restaurant-roadmap .roadmap-section-title {
-	font-size: 26px;
-	display: block;
-	font-weight: 500;
-	color: #444;
-	margin: 20px 0;
-	text-align: center;
-}
-#restaurant-roadmap .roadmap-subsection-title {
-	font-size: 20px;
-	display: block;
-	font-weight: 500;
-	color: #444;
-	margin: 20px 0;
-	text-align: center;
-}
-#restaurant-roadmap .roadmap-item {
-	margin: 35px 0;
-	font-size: 18px;
-}
-#restaurant-roadmap .roadmap-item-name {
-	font-weight: 600;
-	font-size: 17px;
-	color: #555;
-	border-bottom: 2px dotted rgb(213, 213, 213);
-}
-#restaurant-roadmap .roadmap-item-description {
-	font-size: 15px;
-}
-#restaurant-roadmap .roadmap-item-price {
-	float: right;
-	font-weight: 600;
-	color: #555;
-	margin-top: -26px;
-}
-
-#restaurant-roadmap #menu-images img {
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
-    border:5px solid #dadada;
-    display:block;
-    margin:auto;
-    margin-top: 40px;
-}
-
-
-
-/* WhitePaper Section */
-#restaurant-spec {
-	padding: 0 0 80px 0;
-}
-
-
-#restaurant-spec .section-title h2 {
-	color: #fff;
-}
-#restaurant-spec h3 {
-	padding: 10px 0;
-	text-transform: uppercase;
-}
-#restaurant-spec .spec-section hr {
-	margin: 0 auto;
-}
-#restaurant-spec .spec-section {
-	margin: 0 20px 80px;
-}
-#restaurant-spec .spec-section-title {
-	font-size: 26px;
-	display: block;
-	font-weight: 500;
-	color: #444;
-	margin: 20px 0;
-	text-align: center;
-}
-#restaurant-spec .spec-item {
-	margin: 35px 0;
-	font-size: 18px;
-}
-#restaurant-spec .spec-item-name {
-	font-weight: 600;
-	font-size: 17px;
-	color: #555;
-	border-bottom: 2px dotted rgb(213, 213, 213);
-}
-#restaurant-spec .spec-item-description {
-	font-size: 15px;
-}
-#restaurant-spec .spec-item-price {
-	float: right;
-	font-weight: 600;
-	color: #555;
-	margin-top: -26px;
-}
-
-
-.menu-images img {
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
-    border:5px solid #dadada;
-    display:block;
-    margin:auto;
-    margin-top: 40px;
-}
-
-
-
-
 /* Portfolio Section */
 #portfolio {
 	padding: 0 0 120px 0;
 }
 #portfolio .section-title {
-	background: url(../img/gallery-bg.jpg) no-repeat center center fixed;
+	background: #444 url(../img/gallery-bg.jpg) center center no-repeat fixed;
 	background-size: cover;
 	margin-bottom: 50px;
 }
@@ -541,11 +412,15 @@ ol.type li a:hover {
 .hover-bg:hover .hover-text {
 	opacity: 1;
 }
-
-
+/* Team Section */
+#team {
+	color: #fff;
+	background: #444 url(../img/team-bg.jpg) center top no-repeat fixed;
+	background-size: cover;
+}
 #team .overlay {
 	padding: 120px 0 80px 0;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.6);
 }
 #team h2, #team p {
 	color: #fff;
@@ -560,7 +435,7 @@ ol.type li a:hover {
 	margin: 5px 0;
 }
 #team img {
-	width: 140px;
+	width: 280px;
 }
 #team .thumbnail {
 	background: transparent;
@@ -597,13 +472,14 @@ ol.type li a:hover {
 	background: -moz-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb640', endColorstr='#779936', GradientType=0 ); /* IE6-9 */
 }
 #call-reservation .overlay {
 	padding: 80px 0;
 	background: #8eb640;
 }
 #call-reservation h2 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #fff;
 	font-weight: 400;
 	margin: 0;
@@ -641,7 +517,7 @@ ol.type li a:hover {
 label {
 	font-size: 12px;
 	font-weight: 400;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	float: left;
 }
 #contact .form-control {
@@ -740,13 +616,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', end
 #footer a:hover {
 	color: #333;
 }
-
-
-.social-buttons a {
-	color: #eeeeee;
-}
-.social-buttons a:hover {
-	color: #aed660;
-}
-
-
