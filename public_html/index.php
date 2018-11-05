@@ -101,8 +101,6 @@ $localize_hash = GetLocalizeHash();
     ================================================== -->
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
@@ -110,11 +108,13 @@ $localize_hash = GetLocalizeHash();
 
 <!-- Stylesheet
     ================================================== -->
-<?php if(ua_smt()){echo('<link rel="stylesheet" type="text/css"  href="css/style_phone.css">' . "\n");} else {echo('<link rel="stylesheet" type="text/css"  href="css/style_pc.css">' . "\n");} ?>
+<?php if(ua_smt()){echo('<link rel="stylesheet" type="text/css"  href="css/style_phone.css?v=2.0">' . "\n");} else {echo('<link rel="stylesheet" type="text/css"  href="css/style_pc.css">' . "\n");} ?>
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Anton">
+
 
 <link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome-plugin.css?v=201809100249">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
@@ -319,8 +319,8 @@ $localize_hash = GetLocalizeHash();
           </div>
           <div class="spec-item">
             <div class="spec-item-name"><?php echo($localize_hash["SPEC_ETHER_TOKEN_LABEL_04"][$language]); ?></div>
-            <div class="spec-item-price">ERC20 / ERC223</div>
-            <div class="spec-item-description"><?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_04"][$language]); ?></div>
+            <div class="spec-item-price">ERC20/ERC223</div>
+            <div class="spec-item-description"><span id="coin-contract"><?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_04"][$language]); ?></span></div>
           </div>
         </div>
       </div>
@@ -378,7 +378,7 @@ $localize_hash = GetLocalizeHash();
       <div id="row">
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/BDALOGO_wine.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_01.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_BDA_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_BDA_DETAIL"][$language]); ?></p>
@@ -400,7 +400,7 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/BDALOGO_wine.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_02.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_DETAIL"][$language]); ?></p>
@@ -421,7 +421,7 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/BDALOGO_wine.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_03.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_PAUL_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_PAUL_DETAIL"][$language]); ?></p>
@@ -442,7 +442,7 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/BDALOGO_wine.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_04.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_TT_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_TT_DETAIL"][$language]); ?></p>
@@ -463,7 +463,7 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/BDALOGO_wine.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_05.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_RUPIN_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_RUPIN_DETAIL"][$language]); ?></p>
@@ -484,7 +484,7 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/BDALOGO_wine.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_06.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_DETAIL"][$language]); ?></p>
@@ -505,7 +505,23 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/BDALOGO_wine.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_08.png" alt="..."></div>
+            <div class="caption">
+              <h3><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_TITLE"][$language]); ?></h3>
+              <p><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/kanpatree2">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 team">
+          <div class="thumbnail">
+            <div class="team-img"><img src="img/team/member_07.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_PAPARAZZI_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_PAPARAZZI_DETAIL"][$language]); ?></p>

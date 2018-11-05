@@ -24,3 +24,8 @@
 	background: url(../img/team-bg.jpg) no-repeat center center;
 	background-size: cover;
 }
+
+#coin-contract {
+	font-family: 'Anton';
+	font-size:0.85em;
+}
