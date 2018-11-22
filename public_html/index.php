@@ -473,11 +473,11 @@ $localize_hash = GetLocalizeHash();
 	                    <i class="fa fa-twitter"></i>
 	                  </a>
 	                </li>
-	                <li class="list-inline-item">
+	                <!--li class="list-inline-item">
 	                  <a href="https://github.com/lupin68458">
 	                    <i class="fa fa-github-alt"></i>
 	                  </a>
-	                </li>
+	                </li-->
 	              </ul>
             </div>
           </div>
@@ -494,11 +494,11 @@ $localize_hash = GetLocalizeHash();
 	                    <i class="fa fa-twitter"></i>
 	                  </a>
 	                </li>
-	                <li class="list-inline-item">
+	                <!--li class="list-inline-item">
 	                  <a href="https://github.com/tashiro12">
 	                    <i class="fa fa-github-alt"></i>
 	                  </a>
-	                </li>
+	                </li-->
 	              </ul>
             </div>
           </div>
@@ -513,6 +513,11 @@ $localize_hash = GetLocalizeHash();
 	                <li class="list-inline-item">
 	                  <a href="https://twitter.com/kanpatree2">
 	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	                <!li class="list-inline-item">
+	                  <a href="https://github.com/kanpatree2">
+	                    <i class="fa fa-github-alt"></i>
 	                  </a>
 	                </li>
 	              </ul>
