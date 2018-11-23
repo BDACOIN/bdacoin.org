@@ -463,6 +463,27 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
+            <div class="team-img"><img src="img/team/member_08.png" alt="..."></div>
+            <div class="caption">
+              <h3><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_TITLE"][$language]); ?></h3>
+              <p><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_DETAIL"][$language]); ?></p>
+	              <ul class="list-inline social-buttons">
+	                <li class="list-inline-item">
+	                  <a href="https://twitter.com/kanpatree2">
+	                    <i class="fa fa-twitter"></i>
+	                  </a>
+	                </li>
+	                <li class="list-inline-item">
+	                  <a href="https://github.com/kanpatree2">
+	                    <i class="fa fa-github-alt"></i>
+	                  </a>
+	                </li>
+	              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 team">
+          <div class="thumbnail">
             <div class="team-img"><img src="img/team/member_05.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_RUPIN_TITLE"][$language]); ?></h3>
@@ -499,27 +520,6 @@ $localize_hash = GetLocalizeHash();
 	                    <i class="fa fa-github-alt"></i>
 	                  </a>
 	                </li-->
-	              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/member_08.png" alt="..."></div>
-            <div class="caption">
-              <h3><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_TITLE"][$language]); ?></h3>
-              <p><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_DETAIL"][$language]); ?></p>
-	              <ul class="list-inline social-buttons">
-	                <li class="list-inline-item">
-	                  <a href="https://twitter.com/kanpatree2">
-	                    <i class="fa fa-twitter"></i>
-	                  </a>
-	                </li>
-	                <li class="list-inline-item">
-	                  <a href="https://github.com/kanpatree2">
-	                    <i class="fa fa-github-alt"></i>
-	                  </a>
-	                </li>
 	              </ul>
             </div>
           </div>
