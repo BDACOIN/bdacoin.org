@@ -24,9 +24,9 @@ function ua_smt () {
 function GetPriorityLanguage() {
 	$languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 	$languages = array_reverse($languages);
-	 
+
 	$result = '';
-	 
+
 	foreach ($languages as $language) {
 		if (preg_match('/^ja/i', $language)) {
 			$result = 'ja';
@@ -129,7 +129,7 @@ $localize_hash = GetLocalizeHash();
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-bda4"></i>BLACK DIA</a></div>
-    
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -236,16 +236,6 @@ $localize_hash = GetLocalizeHash();
             <div class="roadmap-item-price"><?php echo($localize_hash["ROADMAP_FINANCE_TIME"][$language]); ?></div>
             <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_FINANCE_DETAIL"][$language]); ?></div>
           </div>
-          <div class="roadmap-item">
-            <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TITLE"][$language]); ?></div>
-            <div class="roadmap-item-price"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TIME"][$language]); ?></div>
-            <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?></div>
-          </div>
-          <div class="roadmap-item">
-            <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_OTHEREXCHANGE_TITLE"][$language]); ?></div>
-            <div class="roadmap-item-price"><?php echo($localize_hash["ROADMAP_OTHEREXCHANGE_TIME"][$language]); ?></div>
-            <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_OTHEREXCHANGE_DETAIL"][$language]); ?></div>
-          </div>
         </div>
       </div>
     </div>
@@ -255,20 +245,13 @@ $localize_hash = GetLocalizeHash();
           <h2 class="roadmap-section-title"><?php echo($localize_hash["ROADMAP_BORN_TERM_03"][$language]); ?></h2>
           <hr>
           <div class="roadmap-item">
+            <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TITLE"][$language]); ?></div>
+            <div class="roadmap-item-price"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_TIME"][$language]); ?></div>
+            <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?></div>
+          </div>
+          <div class="roadmap-item">
             <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_MOREEXCHANGE_TITLE"][$language]); ?></div>
             <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_MOREEXCHANGE_DETAIL"][$language]); ?></div>
-          </div>
-          <div class="roadmap-item">
-            <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_WALLET_TITLE"][$language]); ?></div>
-            <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_WALLET_DETAIL"][$language]); ?></div>
-		  </div>
-          <div class="roadmap-item">
-            <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_BAROPEN_TITLE"][$language]); ?></div>
-            <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_BAROPEN_DETAIL"][$language]); ?></div>
-          </div>
-          <div class="roadmap-item">
-            <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_WALLET2_TITLE"][$language]); ?></div>
-            <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_WALLET2_DETAIL"][$language]); ?></div>
           </div>
         </div>
       </div>
@@ -400,34 +383,13 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/member_02.png" alt="..."></div>
-            <div class="caption">
-              <h3><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_TITLE"][$language]); ?></h3>
-              <p><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_DETAIL"][$language]); ?></p>
-	              <ul class="list-inline social-buttons">
-	                <li class="list-inline-item">
-	                  <a href="https://github.com/komiyamma">
-	                    <i class="fa fa-github-alt"></i>
-	                  </a>
-	                </li>
-	                <li class="list-inline-item">
-	                  <a href="https://twitter.com/komiyamma">
-	                    <i class="fa fa-twitter"></i>
-	                  </a>
-	                </li>
-	              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 team">
-          <div class="thumbnail">
             <div class="team-img"><img src="img/team/member_03.png" alt="..."></div>
             <div class="caption">
               <h3><?php echo($localize_hash["TEAM_MEMBER_PAUL_TITLE"][$language]); ?></h3>
               <p><?php echo($localize_hash["TEAM_MEMBER_PAUL_DETAIL"][$language]); ?></p>
 	              <ul class="list-inline social-buttons">
 	                <li class="list-inline-item">
-	                  <a href="https://twitter.com/lovealco2">
+	                  <a href="https://twitter.com/lovealco4">
 	                    <i class="fa fa-twitter"></i>
 	                  </a>
 	                </li>
@@ -442,19 +404,19 @@ $localize_hash = GetLocalizeHash();
         </div>
         <div class="col-md-3 team">
           <div class="thumbnail">
-            <div class="team-img"><img src="img/team/member_04.png" alt="..."></div>
+            <div class="team-img"><img src="img/team/member_02.png" alt="..."></div>
             <div class="caption">
-              <h3><?php echo($localize_hash["TEAM_MEMBER_TT_TITLE"][$language]); ?></h3>
-              <p><?php echo($localize_hash["TEAM_MEMBER_TT_DETAIL"][$language]); ?></p>
+              <h3><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_TITLE"][$language]); ?></h3>
+              <p><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_DETAIL"][$language]); ?></p>
 	              <ul class="list-inline social-buttons">
 	                <li class="list-inline-item">
-	                  <a href="https://twitter.com/GekikaraNoodle">
-	                    <i class="fa fa-twitter"></i>
+	                  <a href="https://github.com/komiyamma">
+	                    <i class="fa fa-github-alt"></i>
 	                  </a>
 	                </li>
 	                <li class="list-inline-item">
-	                  <a href="https://github.com/tksw009">
-	                    <i class="fa fa-github-alt"></i>
+	                  <a href="https://twitter.com/komiyamma">
+	                    <i class="fa fa-twitter"></i>
 	                  </a>
 	                </li>
 	              </ul>
@@ -482,74 +444,6 @@ $localize_hash = GetLocalizeHash();
             </div>
           </div>
         </div>
-        <div class="col-md-3 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/member_05.png" alt="..."></div>
-            <div class="caption">
-              <h3><?php echo($localize_hash["TEAM_MEMBER_RUPIN_TITLE"][$language]); ?></h3>
-              <p><?php echo($localize_hash["TEAM_MEMBER_RUPIN_DETAIL"][$language]); ?></p>
-	              <ul class="list-inline social-buttons">
-	                <li class="list-inline-item">
-	                  <a href="https://twitter.com/akiairdrop">
-	                    <i class="fa fa-twitter"></i>
-	                  </a>
-	                </li>
-	                <!--li class="list-inline-item">
-	                  <a href="https://github.com/lupin68458">
-	                    <i class="fa fa-github-alt"></i>
-	                  </a>
-	                </li-->
-	              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/member_06.png" alt="..."></div>
-            <div class="caption">
-              <h3><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_TITLE"][$language]); ?></h3>
-              <p><?php echo($localize_hash["TEAM_MEMBER_TASHIRO_DETAIL"][$language]); ?></p>
-	              <ul class="list-inline social-buttons">
-	                <li class="list-inline-item">
-	                  <a href="https://twitter.com/yazawanicoin">
-	                    <i class="fa fa-twitter"></i>
-	                  </a>
-	                </li>
-	                <!--li class="list-inline-item">
-	                  <a href="https://github.com/tashiro12">
-	                    <i class="fa fa-github-alt"></i>
-	                  </a>
-	                </li-->
-	              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 team">
-          <div class="thumbnail">
-            <div class="team-img"><img src="img/team/member_07.png" alt="..."></div>
-            <div class="caption">
-              <h3><?php echo($localize_hash["TEAM_MEMBER_PAPARAZZI_TITLE"][$language]); ?></h3>
-              <p><?php echo($localize_hash["TEAM_MEMBER_PAPARAZZI_DETAIL"][$language]); ?></p>
-	              <ul class="list-inline social-buttons">
-	                <li class="list-inline-item">
-	                  <a href="https://twitter.com/rujakdulit">
-	                    <i class="fa fa-twitter"></i>
-	                  </a>
-	                </li>
-	                <li class="list-inline-item">
-	                  <a href="https://www.facebook.com/rujak.dulit">
-	                    <i class="fa fa-facebook"></i>
-	                  </a>
-	                </li>
-	                <li class="list-inline-item">
-	                  <a href="https://github.com/sinopsisfilm">
-	                    <i class="fa fa-github-alt"></i>
-	                  </a>
-	                </li>
-	              </ul>
-            </div>
-          </div>
-        </div>
     </div>
   </div>
 </div>
@@ -566,7 +460,7 @@ $localize_hash = GetLocalizeHash();
                 </a>
             </li>
             <li class="list-inline-item">
-                <a href="https://discord.gg/zcXbcbm">
+                <a href="https://discord.gg/xKaXrYh">
                     <i class="fa fa-discord"></i>
                 </a>
             </li>
@@ -587,7 +481,7 @@ $localize_hash = GetLocalizeHash();
             </li>
         </ul>
       </div>
-      <p>Copyright &copy; BLACK DIA COIN Team 2018</p>
+      <p>Copyright &copy; BLACK DIA COIN Team 2018-2019</p>
     </div>
   </div>
 </div>
