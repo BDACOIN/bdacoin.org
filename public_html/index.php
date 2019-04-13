@@ -140,10 +140,19 @@ $localize_hash = GetLocalizeHash();
         <li><a href="#team" class="page-scroll">TEAM</a></li>
         <li>
             <?php
-            if ($language=="ja") {
-                echo("<a class='nav-link js-scroll-trigger' href='http://en.bdacoin.org'>ENGLISH</a>");
+            $selfURL =  GetCurrentURL();
+            if ( stripos($selfURL , "test.") === FALSE ) {
+                if ($language=="ja") {
+                    echo("<a class='nav-link js-scroll-trigger' href='http://en.bdacoin.org'>ENGLISH</a>");
+                } else {
+                    echo("<a class='nav-link js-scroll-trigger' href='http://ja.bdacoin.org'>JAPANESE</a>");
+                }
             } else {
-                echo("<a class='nav-link js-scroll-trigger' href='http://ja.bdacoin.org'>JAPANESE</a>");
+                if ($language=="ja") {
+                    echo("<a class='nav-link js-scroll-trigger' href='http://en.test.bdacoin.org'>ENGLISH</a>");
+                } else {
+                    echo("<a class='nav-link js-scroll-trigger' href='http://ja.test.bdacoin.org'>JAPANESE</a>");
+                }
             }
             ?>
         </li>
