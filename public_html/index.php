@@ -42,7 +42,7 @@ function GetPriorityLanguage() {
 
 // 表示対象の言語(URL基準で決まる)
 function GetCurrentLanguage() {
-    $selfURL =  GetCurrentURL();
+  $selfURL = GetCurrentURL();
 
 	if ( stripos($selfURL , "ja.") === 0 ) {
 	   return "ja";
@@ -50,7 +50,7 @@ function GetCurrentLanguage() {
 	   return "en";
 	}
 
-    return "ja";
+  return "ja";
 }
 
 // Jsonを経由して、PHPハッシュデータとして取得
@@ -259,6 +259,11 @@ $localize_hash = GetLocalizeHash();
             <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_COINEXCHANGE_DETAIL"][$language]); ?></div>
           </div>
           <div class="roadmap-item">
+            <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_COINSWAP2_TITLE"][$language]); ?></div>
+            <div class="roadmap-item-price"><?php echo($localize_hash["ROADMAP_COINSWAP2_TIME"][$language]); ?></div>
+            <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_COINSWAP2_DETAIL"][$language]); ?></div>
+          </div>
+          <div class="roadmap-item">
             <div class="roadmap-item-name"><?php echo($localize_hash["ROADMAP_MOREEXCHANGE_TITLE"][$language]); ?></div>
             <div class="roadmap-item-description"><?php echo($localize_hash["ROADMAP_MOREEXCHANGE_DETAIL"][$language]); ?></div>
           </div>
@@ -310,9 +315,14 @@ $localize_hash = GetLocalizeHash();
             <div class="spec-item-price"><?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_03"][$language]); ?></div>
           </div>
           <div class="spec-item">
-            <div class="spec-item-name"><?php echo($localize_hash["SPEC_ETHER_TOKEN_LABEL_04"][$language]); ?></div>
+            <div class="spec-item-name"><?php echo($localize_hash["SPEC_ETHER_TOKEN_LABEL_05"][$language]); ?></div>
             <div class="spec-item-price">ERC20/ERC223</div>
-            <div class="spec-item-description"><span id="coin-contract"><?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_04"][$language]); ?></span></div>
+            <div class="spec-item-description"><span id="coin-contract"><?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_05"][$language]); ?></span></div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-item-name" style="color:#dddddd"><?php echo($localize_hash["SPEC_ETHER_TOKEN_LABEL_04"][$language]); ?></div>
+            <div class="spec-item-price" style="color:#dddddd">ERC20/ERC223</div>
+            <div class="spec-item-description" style="color:#dddddd"><span id="coin-contract"><?php echo($localize_hash["SPEC_ETHER_TOKEN_DETAIL_04"][$language]); ?></span></div>
           </div>
         </div>
       </div>
