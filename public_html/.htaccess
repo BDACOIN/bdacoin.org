@@ -8,13 +8,13 @@ DirectoryIndex index.php index.py index.cgi index.html index.htm
 	Header set Cache-Control no-cache
 </Files>
 
-
 <IfModule mod_mime.c>
 	AddType font/opentype         .otf
 	AddType font/eot              .eot
 	AddType font/truetype         .ttf
 	AddType application/font-woff .woff
 </IfModule>
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE font/opentype font/eot font/truetype application/font-woff
 </IfModule>
