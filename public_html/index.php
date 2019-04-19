@@ -576,7 +576,7 @@ $localize_hash = GetLocalizeHash();
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://t.me/joinchat/Gkw2Tk87hqPCjF1tmU-Vdg">
+                            <a href="https://t.me/BLACKDIACOIN">
                                 <i class="fa fa-telegram-alt"></i>
                             </a>
                         </li>
