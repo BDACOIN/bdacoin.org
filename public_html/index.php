@@ -536,7 +536,7 @@ $localize_hash = GetLocalizeHash();
         <div class="container">
             <div class="row">
                 <div class="categories">
-                    <a href="https://mercatox.com/exchange/BDA/ETH"><div class="about-img"><img src="listing/mercatox.png" alt=""></div></a>
+                    <a href="https://mercatox.com/exchange/BDA/ETH"><div class="about-img"><img src="listing/mercatox_large.png" alt=""></div></a>
                 </div>
             </div>
         </div>
