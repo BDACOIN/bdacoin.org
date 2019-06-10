@@ -436,29 +436,28 @@ $localize_hash = GetLocalizeHash();
                     <p><?php echo($localize_hash["TEAM_DETAIL_02"][$language]); ?></p>
                 </div>
                 <div id="row">
-                    <div class="col-md-3 team">
+                    <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/member_01.png" alt="..."></div>
+                            <div class="team-img"><img src="img/team/member_08.png" alt="..."></div>
                             <div class="caption">
-                                <h3><?php echo($localize_hash["TEAM_MEMBER_BDA_TITLE"][$language]); ?></h3>
-                                <p><?php echo($localize_hash["TEAM_MEMBER_BDA_DETAIL"][$language]); ?></p>
+                                <h3><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_TITLE"][$language]); ?></h3>
+                                <p><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_DETAIL"][$language]); ?></p>
                                 <ul class="list-inline social-buttons">
                                     <li class="list-inline-item">
-                                        <a href="https://twitter.com/bda_dia">
+                                        <a href="https://twitter.com/kanpatree2">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="https://www.facebook.com/BlackDiacoin-677002095997100/">
-                                            <i class="fa fa-facebook"></i>
+                                        <a href="https://github.com/kanpatree2">
+                                            <i class="fa fa-github-alt"></i>
                                         </a>
                                     </li>
                                 </ul>
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 team">
+                    <div class="col-md-4 team">
                         <div class="thumbnail">
                             <div class="team-img"><img src="img/team/member_03.png" alt="..."></div>
                             <div class="caption">
@@ -479,7 +478,7 @@ $localize_hash = GetLocalizeHash();
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 team">
+                    <div class="col-md-4 team">
                         <div class="thumbnail">
                             <div class="team-img"><img src="img/team/member_02.png" alt="..."></div>
                             <div class="caption">
@@ -494,27 +493,6 @@ $localize_hash = GetLocalizeHash();
                                     <li class="list-inline-item">
                                         <a href="https://twitter.com/komiyamma">
                                             <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 team">
-                        <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/member_08.png" alt="..."></div>
-                            <div class="caption">
-                                <h3><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_TITLE"][$language]); ?></h3>
-                                <p><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_DETAIL"][$language]); ?></p>
-                                <ul class="list-inline social-buttons">
-                                    <li class="list-inline-item">
-                                        <a href="https://twitter.com/kanpatree2">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="https://github.com/kanpatree2">
-                                            <i class="fa fa-github-alt"></i>
                                         </a>
                                     </li>
                                 </ul>
