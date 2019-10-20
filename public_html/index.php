@@ -518,6 +518,13 @@ $localize_hash = GetLocalizeHash();
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="categories">
+                    <a href="https://crypto-harbor.com/trade/BDA_ETH"><div class="about-img"><img src="listing/crypto_harbor_large.png" alt=""></div></a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Contact Section -->
     <div id="footer">
