@@ -229,14 +229,14 @@ $localize_hash = GetLocalizeHash();
                             <div class="roadmap-item-description">
                                 <?php echo($localize_hash["ROADMAP_BORN_DETAIL"][$language]); ?></div>
                         </div>
-                        <div class="roadmap-item">
+                        <!-- div class="roadmap-item">
                             <div class="roadmap-item-name">
                                 <?php echo($localize_hash["ROADMAP_CHARA_TITLE"][$language]); ?></div>
                             <div class="roadmap-item-price">
                                 <?php echo($localize_hash["ROADMAP_CHARA_TIME"][$language]); ?></div>
                             <div class="roadmap-item-description">
                                 <?php echo($localize_hash["ROADMAP_CHARA_DETAIL"][$language]); ?></div>
-                        </div>
+                        </div -->
                         <div class="roadmap-item">
                             <div class="roadmap-item-name">
                                 <?php echo($localize_hash["ROADMAP_WHITEPAPER_TITLE"][$language]); ?></div>
@@ -438,7 +438,7 @@ $localize_hash = GetLocalizeHash();
                 <div id="row">
                     <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/member_08.png" alt="..."></div>
+                            <!-- div class="team-img"><img src="img/team/member_08.png" alt="..."></div -->
                             <div class="caption">
                                 <h3><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_TITLE"][$language]); ?></h3>
                                 <p><?php echo($localize_hash["TEAM_MEMBER_CHAMPHORTREE_DETAIL"][$language]); ?></p>
@@ -459,7 +459,7 @@ $localize_hash = GetLocalizeHash();
                     </div>
                     <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/member_03.png" alt="..."></div>
+                            <!-- div class="team-img"><img src="img/team/member_03.png" alt="..."></div -->
                             <div class="caption">
                                 <h3><?php echo($localize_hash["TEAM_MEMBER_PAUL_TITLE"][$language]); ?></h3>
                                 <p><?php echo($localize_hash["TEAM_MEMBER_PAUL_DETAIL"][$language]); ?></p>
@@ -480,7 +480,7 @@ $localize_hash = GetLocalizeHash();
                     </div>
                     <div class="col-md-4 team">
                         <div class="thumbnail">
-                            <div class="team-img"><img src="img/team/member_02.png" alt="..."></div>
+                            <!-- div class="team-img"><img src="img/team/member_02.png" alt="..."></div -->
                             <div class="caption">
                                 <h3><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_TITLE"][$language]); ?></h3>
                                 <p><?php echo($localize_hash["TEAM_MEMBER_KOMIYAMMA_DETAIL"][$language]); ?></p>
@@ -518,13 +518,13 @@ $localize_hash = GetLocalizeHash();
                 </div>
             </div>
         </div>
-        <div class="container">
+        <!-- div class="container">
             <div class="row">
                 <div class="categories">
                     <a href="https://crypto-harbor.com/trade/BDA_ETH"><div class="about-img"><img src="listing/crypto_harbor_large.png" alt=""></div></a>
                 </div>
             </div>
-        </div>
+        </div -->
     </div>
     <!-- Contact Section -->
     <div id="footer">
@@ -567,7 +567,7 @@ $localize_hash = GetLocalizeHash();
                         </li>
                     </ul>
                 </div>
-                <p>Copyright &copy; BLACK DIA COIN Team 2019</p>
+                <p>Copyright &copy; BLACK DIA COIN Team 2019-2021</p>
             </div>
         </div>
     </div>
